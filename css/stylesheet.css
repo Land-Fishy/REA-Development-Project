@@ -12,12 +12,17 @@
 	padding-right: 0px;
 }
 /* Head Element */
-header .col{
-	height: 200px;
-	background-color: var(--header-background);
+header .header{
+	height: 72.2vh;
+	background-image: url(../images/daniel-probst-ok2OISDAu3I-unsplash.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clip-path: polygon(0% 0%,0% 89.75%, 46.35% 89.75%, 50% 100%, 53.64% 89.75%, 100% 89.75%, 100% 0%);
 }
 .header-top{
-	height: 80px;
+	height: 12.68vh;
 	width: 100%;
 	background-color: var(--header-background);
 }
@@ -27,6 +32,13 @@ header .col{
 	text-align: center;
 }
 /* Nav Element */
+.navbar{
+	height: 11.63vh;
+	display: flex;
+	justify-content: center;
+
+}
+/* Nav text styling */
 
 /* Text Styling */
 
