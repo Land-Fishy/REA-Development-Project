@@ -4,23 +4,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="css/LoginStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="LoginStyle.css">
     <title>Document</title>
   </head>
   <body>
     <div class="container-fluid">      
-      <?php require_once 'include/nav.php';?>
+      <?php require_once '../include/nav.php';?>
     	<header>
-    		<?php require_once 'include/header.php'; 
+    		<?php require_once '../include/header.php'; 
     		?>
     	</header>
     	<main>
         
           <?php
           session_start();
-               include 'include/LoginForm.php'; 
+               include 'LoginForm.php'; 
                
           
 	                if(isset($_POST["login"])){
@@ -29,7 +29,7 @@
 
                 function handleForm(){
                 
-                    require 'include/db.php';
+                    require '../include/db.php';
                     
                     $_SESSION['error'] = null;
                     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
@@ -72,7 +72,7 @@
                   
     	</main>
     	<footer>
-    		<?php require_once 'include/footer.php';
+    		<?php require_once '../include/footer.php';
     		?>
     	</footer>
     </div>
