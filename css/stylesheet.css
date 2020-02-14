@@ -1,24 +1,29 @@
+/* Fonts */
+
+/* CSS Variable */
+:root {
+	--text-color: rgb(220,220,220);
+	--header-background: rgb(10,9,13);
+}
 /* container element */
 .container-fluid{
 	min-height: 100vh;
 	padding-left: 0px;
 	padding-right: 0px;
 }
-/* Fonts */
-
 /* Head Element */
 header .col{
 	height: 200px;
-	background-color: black;
+	background-color: var(--header-background);
 }
 .header-top{
 	height: 80px;
 	width: 100%;
-	background-color: black;
+	background-color: var(--header-background);
 }
 .header-top h1{
 	padding-top: 0.7%;
-	color: white;
+	color: var(--text-color);
 	text-align: center;
 }
 /* Nav Element */
@@ -35,12 +40,12 @@ figcaption{
 	text-align: center;
 }
 /* Book Element */
+figure{
+	padding: 10px;
+}
 figure img{
 	height: 100%;
 	width: 100%;
-}
-.w-100{
-	height: 50px;
 }
 main .container-fluid{
 	padding: 3%;

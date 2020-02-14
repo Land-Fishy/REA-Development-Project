@@ -1,9 +1,13 @@
 <?php
+function makeMenu($db, $class = false){
+    $menu = getMenu($db);
 
-function makeMenu($db){
-    $query = 'SELECT item, slug, type FROM menu WHERE active = 0;';
-    $query = 'SELECT item, slug, type FROM menu';
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $html = '<ul'.($class ? ' class="'.$class.'">' : '>');
+    foreach($menu as $v){
+        $html .= '<li><a href="'.(makeLink($v['slug'])).'">'.$v['item'].'</a></li>';
+    }
+    $html .= '<ul>';
+    return $html;
 }
+
+
