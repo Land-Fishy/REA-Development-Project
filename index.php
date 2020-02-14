@@ -20,20 +20,19 @@
     	<main>
         <div class="container-fluid">
           <div class="row justify-content-center">
-              <figure class="col-sm-3">
+              <figure class="col-md-3">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
-              <figure class="col-sm-3">
+              <figure class="col-md-3">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
-              <figure class="col-sm-3">
+              <figure class="col-md-3">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
-              <div class="w-100"></div>
-              <figure class="col-sm-3">
+              <figure class="col-md-3">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
