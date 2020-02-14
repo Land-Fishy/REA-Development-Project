@@ -18,34 +18,28 @@
     		?>
     	</header>
     	<main>
-        <div class="container-fluid">
-          <div class="row justify-content-center">
-              <figure class="col-md-3">
+        <div class="col-md-2"></div>
+            <div class="container-fluid col-md-8">
+              <div class="row justify-content-center">
+                <figure class="col-md-4">
+                <img src="images/newbook.jpg">
+                <figcaption>A Monster Escapes</figcaption>
+                </figure>
+                <figure class="col-md-4">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
-              <figure class="col-md-3">
+              <figure class="col-md-4">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
               </figure>
-              <figure class="col-md-3">
+                <figure class="col-md-4">
                 <img src="images/newbook.jpg">
                 <figcaption>A Monster Escapes</figcaption>
-              </figure>
-              <figure class="col-md-3">
-                <img src="images/newbook.jpg">
-                <figcaption>A Monster Escapes</figcaption>
-              </figure>
-              <figure class="col-sm-3">
-                <img src="images/newbook.jpg">
-                <figcaption>A Monster Escapes</figcaption>
-              </figure>
-              <figure class="col-sm-3">
-                <img src="images/newbook.jpg">
-                <figcaption>A Monster Escapes</figcaption>
-              </figure>
-          </div>
-        </div>
+                </figure>
+              </div>
+            </div>
+          <div class="col-md-2"></div>
     	</main>
     	<footer>
     		<?php require_once 'include/footer.php';
