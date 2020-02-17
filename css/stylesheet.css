@@ -1,8 +1,15 @@
 /* Fonts */
-
+@font-face{
+	font-family: candara;
+	src: url(../fonts/Candara.ttf);
+}
+body{
+	font-family: candara;
+}
 /* CSS Variable */
 :root {
 	--text-color: rgb(220,220,220);
+	--amazon-text: rgb(240, 136, 4);
 	--header-background: rgb(10,9,13);
 }
 /* container element */
@@ -38,17 +45,42 @@ header{
 	height: 13vh;
 	width: 100%;
 }
+/* Latest Release (Styling and Text) */
 .latest{
 	width: 26%;
 	position: absolute;
-	left: 14.4%;
+	left: 19.65%;
 	top: 29%;
+	
 }
 .latest img{
 	height: 70vh;
 }
 .latest-text{
-
+	height: 35%;
+	width: 25%;
+	position: absolute;
+	top: 37%;
+	right: 19.8%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.latest-text h1{
+	color: var(--text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+.latest-box{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(220, 220, 220, 0.5);
+}
+.latest-text a{
+	color: var(--amazon-text);
+	text-transform: uppercase;
 }
 /* Nav Element */
 .navbar{
