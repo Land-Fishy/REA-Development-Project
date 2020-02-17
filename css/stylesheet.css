@@ -1,6 +1,7 @@
 /* Fonts */
 body{
 	font-family: "candara light";
+	background-color: rgb(238, 238, 238);
 }
 *{
 	padding: 0;
@@ -29,7 +30,7 @@ header{
 }
 .header-image{
 	height: 72.2vh;
-	background-image: url(../images/daniel-probst-ok2OISDAu3I-unsplash.jpg);
+	background-image: url(../images/HeaderBG.png);
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -150,13 +151,16 @@ nav ul li a:hover{
 /* Text Styling */
 
 /* Main Element */
-.spam{
-	height: 1000px;
-	background-color: black;
+main{
+	height: auto;
 }
 /* Main Text styling */
 figcaption{
+	font-size: 47px;
+	color: var(--text-color);
+	background-color: var(--background-color);
 	text-align: center;
+	margin-top: 1%;
 }
 /* Book Element */
 figure{
@@ -169,19 +173,29 @@ figure img{
 }
 figure:hover{
 	transform: scale(1.1);
-	transition: 1.5s;
-	background-color: rgba(220, 220, 220, 0.5);
+	transition: 1s;
 	z-index: 1;
 }
 main .container-fluid{
 	padding: 3%;
 }
 /* Footer Element */
-
-/* Footer Text styling */
-footer .col{
-	height: 10%;
-	width: 100%;
-	background-color: orange;
-	text-align: center;
+footer{
+	height: 706px;
+	width: 100vw;
+	position: relative;
+	text-align: center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../images/FooterBGs.png);
+}
+footer div{
+	width: 100vw;
+	height: 75px;
+	position: absolute;
+	bottom: 0;
+}
+/* Footer text styling */ 
+footer p{
+	color: orange;
 }

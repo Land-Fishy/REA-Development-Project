@@ -45,10 +45,8 @@
             </div>
           <div class="col-md-2"></div>
     	</main>
-    	<footer>
     		<?php require_once 'include/footer.php';
     		?>
-    	</footer>
     </div>
   </body>
 </html>
