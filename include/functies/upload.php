@@ -15,7 +15,9 @@
 				$stmt->bindParam(5, $_POST['asin'], PDO::PARAM_STR);
 				$stmt->bindParam(6, $_POST['page'], PDO::PARAM_INT);
 				$stmt->bindParam(7, $_POST['genre'], PDO::PARAM_INT);
+				$_POST['sub'] = empty($_POST['sub']) ? NULL : $_POST['sub'];  
 				$stmt->bindParam(8, $_POST['sub'], PDO::PARAM_INT);
+				
 				$stmt->execute();
 			}else{
 				$error = '<p>The posted file was not an image.</p>';
@@ -45,6 +47,7 @@
 			</select>
 			<label for="sub">Subgenre</label>
 			<select name="sub" id="sub">
+				<option value="">None</option>
 				<?php
 					foreach(getGenre($db) as $key=>$value){
 						echo '<option value='.$value['id'].'">'.$value['genre'].'</option>';
