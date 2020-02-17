@@ -4,7 +4,6 @@
 	$error = '';
 		if(isset($_POST['upload']) && !empty($_FILES['image'])){
 			$bestand = $_FILES['image'];
-			$een = 1;
 			if(substr($bestand['type'], 0, 5) == 'image'){
 				move_uploaded_file($bestand['tmp_name'], $dir.$bestand['name']);
 				$stmt = $db->prepare("INSERT INTO books (image, title, release_date, description, amazon_code, pagecount, genre, subgenre) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");

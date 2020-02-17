@@ -10,5 +10,12 @@ function getBookInformation($db, $limit = 10){
     
     return $result;
 }
-
+function getBookInformationId($db, $id){
+    $query = 'SELECT * FROM `books` WHERE id = '.$id;
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    return $result;
+}
 
