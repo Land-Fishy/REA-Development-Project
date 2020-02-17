@@ -1,5 +1,5 @@
 <div class="header-image"></div>
-<div class="fad">
+<div class="latest-release">
 	<div class="latest">
 		<img src="images/newbook.jpg">
 	</div>
