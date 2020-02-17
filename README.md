@@ -16,7 +16,7 @@ Database structuur – Aron en Madé
 
 CMS – Casper, Aron en Madé
 
-Amazon koppeling – Madé
+Amazon koppeling – Jermain
 
 Mailchimp – Jermain
 
