@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Feb 13, 2020 at 11:21 AM
+-- Generation Time: Feb 17, 2020 at 11:53 AM
 -- Server version: 10.3.22-MariaDB-1:10.3.22+maria~bionic
--- PHP Version: 8.0.0-dev
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,9 +35,9 @@ CREATE TABLE `books` (
   `title` varchar(100) NOT NULL,
   `release_date` date NOT NULL,
   `genre` int(11) NOT NULL,
-  `subgenre` int(11) NOT NULL,
+  `subgenre` int(11) DEFAULT NULL,
   `description` varchar(1000) NOT NULL,
-  `amazon_code` varchar(50) NOT NULL,
+  `asin` varchar(50) NOT NULL,
   `language` varchar(50) NOT NULL DEFAULT 'English',
   `pagecount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
