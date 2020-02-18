@@ -8,7 +8,6 @@ try{
     if(isset($_GET['book'])){
         $id = $_GET['book'];
         $book = getBookInformationId($db, $id);
-        var_dump($book);
     }else{
         $book = false;
     }
@@ -27,7 +26,7 @@ try{
         $bestand = $_FILES['image'];
         $bookid = $book['id'];
         move_uploaded_file($bestand['tmp_name'], $dir.$bestand['name']);
-        $stmt = $db->prepare("UPDATE books SET image=?, title=?, release_date=?, description=?, asin=?, pagecount=?, genre=?, subgenre=?) WHERE id = $bookid");
+        $stmt = $db->prepare("UPDATE books SET image=?, title=?, release_date=?, description=?, asin=?, pagecount=?, genre=?, subgenre=? WHERE id = $bookid");
         $bestand['name'] = empty($bestand['name']) ? $book['image'] : $bestand['name'];
         $stmt->bindParam(1, $bestand['name'], PDO::PARAM_STR);
         $stmt->bindParam(2, $_POST['title'], PDO::PARAM_STR);
@@ -52,7 +51,7 @@ try{
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>boek maken</title>
+    <title>Edit book</title>
     <style>
      form{
          display: flex;
@@ -96,7 +95,7 @@ try{
         <option value="">None</option>
         <?php
         foreach($genre as $key=>$value){
-            if($value['id'] == $book['genre']){
+            if($value['id'] == $book['subgenre']){
                 echo '<option value='.$value['id'].'" selected>'.$value['genre'].'</option>';
             }else{
                 echo '<option value='.$value['id'].'">'.$value['genre'].'</option>';
