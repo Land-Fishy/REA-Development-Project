@@ -1,7 +1,9 @@
 <?php
-
 include '../include/db.php';
 include '../include/functies/functies.php';
+include '../include/functies/sessionStart.php';
+include '../include/functies/logout.php';
+include '../include/functies/unsetRedirect.php';
 
 function overviewmaker($data){
     $html = '';
@@ -46,6 +48,7 @@ $books = getBookInformation($db);
       
   </head>
   <body>
+	<?php include '../include/logoutForm.php'; ?>
     <h1>All books</h1>
     <?php echo overviewmaker($books) ?>   
   </body>

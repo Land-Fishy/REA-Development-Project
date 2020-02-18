@@ -1,12 +1,9 @@
-
-
 a {
   color: #92badd;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
 }
-
 h2 {
   text-align: center;
   font-size: 16px;
@@ -16,11 +13,6 @@ h2 {
   margin: 40px 8px 10px 8px; 
   color: #cccccc;
 }
-
-
-
-
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -31,7 +23,6 @@ h2 {
   align-content: stretch;
   height: 300px;
 }
-
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
@@ -45,7 +36,6 @@ h2 {
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
 }
-
 #formFooter {
   background-color: #f6f6f6;
   border-top: 1px solid #dce8f1;
@@ -54,24 +44,16 @@ h2 {
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
 }
-
-
-
-
-
 h2.inactive {
   color: #cccccc;
 }
-
 h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #5fbae9;
 }
-
-
-
-
-
+.error {
+    color: red;
+}
 input[type=button], input[type=submit], input[type=reset]  {
   background-color: #5e2a2a;
   border: none;
@@ -93,11 +75,9 @@ input[type=button], input[type=submit], input[type=reset]  {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
   background-color: #CE8181;
 }
-
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
@@ -105,7 +85,6 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
-
 input[type=text] {
   background-color: #f6f6f6;
   border: none;
@@ -126,19 +105,13 @@ input[type=text] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
-
 input[type=text]:focus {
   background-color: #fff;
   border-bottom: 2px solid #CE8181;
 }
-
 input[type=text]:placeholder {
   color: #cccccc;
 }
-
-
-
-
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -147,7 +120,6 @@ input[type=text]:placeholder {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -160,7 +132,6 @@ input[type=text]:placeholder {
     transform: none;
   }
 }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -173,12 +144,10 @@ input[type=text]:placeholder {
     transform: none;
   }
 }
-
 /* Simple CSS3 Fade-in Animation */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
 .fadeIn {
   opacity:0;
   -webkit-animation:fadeIn ease-in 1;
@@ -193,32 +162,26 @@ input[type=text]:placeholder {
   -moz-animation-duration:1s;
   animation-duration:1s;
 }
-
 .fadeIn.first {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-
 .fadeIn.second {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-
 .fadeIn.third {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
-
 .fadeIn.fourth {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
-
-
 .underlineHover:after {
   display: block;
   left: 0;
@@ -229,19 +192,12 @@ input[type=text]:placeholder {
   content: "";
   transition: width 0.2s;
 }
-
 .underlineHover:hover {
   color: #0d0d0d;
 }
-
 .underlineHover:hover:after{
   width: 100%;
 }
-
-
-
-
-
 *:focus {
     outline: none;
-} 
+}

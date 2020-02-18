@@ -38,6 +38,7 @@ try{
         $_POST['sub'] = empty($_POST['sub']) ? NULL : $_POST['sub'];
         $stmt->bindParam(8, $_POST['sub'], PDO::PARAM_INT);
         $stmt->execute();
+		header("Refresh:0");
     }
     $db = null;
     $stmt = null;
@@ -105,5 +106,6 @@ try{
       </select>
       <input type="submit" name="upload" value="submit" id="upload">
     </form>
+	<a href="overview.php">Back to overview</a>
   </body>
 </html>
