@@ -2,6 +2,7 @@
 require_once '../include/db.php';
 require_once '../include/functies/getGenre.php';
 require_once '../include/functies/getBookInformation.php';
+include '../include/functies/unsetRedirect.php';
 
 
 try{
