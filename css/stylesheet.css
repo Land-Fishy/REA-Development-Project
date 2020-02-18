@@ -60,7 +60,7 @@ header h1{
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
   border-top: 70px solid var(--background-color);
-  z-index: 1000;
+  z-index: 1;
   margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@ nav{
 	align-items: center;
 	position: sticky;
 	top: 0;
-	z-index: 10000;
+	z-index: 20;
 }
 
 nav ul{
@@ -144,28 +144,34 @@ nav ul li:hover .dropdown{
 }
 
 .fas{
-	position: absolute;
 	display: none;
+	position: absolute;
 }
 
 nav ul li a.active{
-	background-color: rgb(104,74,70);
+	background-color: rgb(55,54,57);
 }
 
 /* ----- Main ----- Jermain */
 
+main{
+	min-height: 500px;
+	background-color: rgb(238,238,238);
+	padding: 20px;
+	flex: 1;
+}
 
 
 /* ----- Footer ----- */
 
 footer{
-	height: 706px;
+	height: 500px;
 	width: 100vw;
-	position: relative;
 	text-align: center; 
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(../images/FooterBGs.png);
+	position: relative;
 }
 
 footer div{
@@ -175,6 +181,25 @@ footer div{
 	bottom: 0;
 }
 
+footer p{
+	color: var(--text-color);
+	font-size: 20px;
+	letter-spacing: 3px;
+}
+
+footer a{
+	color: var(--text-color);
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-decoration: none;
+	position: absolute;
+	right: 60px;
+	bottom: 32px;
+}
+
+footer a:hover{
+	color: rgb(240,136,4);
+}
 
 /* --- Media queries --- */
 
@@ -182,18 +207,38 @@ footer div{
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){	
+	header h1{
+		font-size: 50px;
+		transition: font-size 2s;
+	}
+	
+	nav:hover{
+		height: 500px;
+	}
+	
 	nav>ul{
+		width: 100%;
 		visibility: hidden;
 		opacity: 0;
 		flex-direction: column;
+		justify-content: flex-start;
+		margin: 0 auto;
+		position: absolute;
+	}
+	
+	nav ul li{
+		width: 100%;
 	}
 	
 	nav .fas{
-		display: block;
+		width: 30px;
+		height: 30px;
+		color: var(--text-color);
 		font-size: 30px;
-		margin: 10px;
-		color: rgb(255,207,17);
+		margin: 15px;
+		position: absolute;
+		display: block;
 		z-index: 1;
 	}
 	
@@ -203,20 +248,22 @@ footer div{
 		transition: opacity 0.5s;
 	}
 	
+	nav:hover .fas{
+		display: none;
+	}
+	
 	nav:hover+div {
-		margin-top: 500px;
 		transition: margin-top 1s;
 	}
 	
 	nav>ul>li, nav>ul>li>a, .dropdown{
 		display: block;
 	}
-	
-	.dropdown li a{
-		background-color: rgb(54,55,48);
-	}
 }
 
 @media screen and (max-width: 460px){
-
+	header h1{
+		font-size: 30px;
+		transition: font-size 2s;
+	}
 }
