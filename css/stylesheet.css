@@ -1,9 +1,9 @@
 /* CSS Variable */
 :root {
 	--text-color: rgb(220,220,220);
-	--amazon-text: rgb(240, 136, 4);
+	--amazon-text: rgb(240,136,4);
 	--background-color: rgb(10,9,13);
-	--font: font: "candara light";
+	--font-light: "candara light";
 	--hover-color: ;
 }
 
@@ -12,6 +12,14 @@ body{
 	background-color: rgb(238, 238, 238);
 	overflow-x: hidden;
 	margin: 0;
+}
+
+.container{
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ----- Header ----- */
@@ -27,16 +35,23 @@ header{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
 }
 
 header h1{
-	font-family: "candara light";
-	font-size: 75px;
-	margin: 0;
+	height: 130px;
+	line-height: 130px;
 	color: var(--text-color);
+	background-color: var(--background-color);
+	font-family: var(--font-light);
+	font-size: 70px;
+	font-weight: normal;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: var(--background-color);
+	letter-spacing: 10px;
+	margin: 0;
+	display: block;
+	z-index: 5;
 }
 
 .triangle{
@@ -49,45 +64,92 @@ header h1{
   margin: 0 auto;
 }
 
+.gradient{
+	width: 100vw;
+	height: 100%;
+	background: rgb(10,9,13);
+	background: linear-gradient(90deg, rgba(10,9,13,1) 0%, rgba(10,9,13,1) 57%, rgba(10,9,13,0.55) 88%, rgba(10,9,13,0.2) 100%);
+	opacity: 0.87;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 /* ----- Nav ----- */
 
 nav{
-	z-index: 10000;
-	height: 50px;
+	height: 60px;
 	width: 100vw;
+	background-color: var(--background-color);
 	justify-content: center;
 	align-items: center;
-	background-color: var(--background-color);
+	position: sticky;
+	top: 0;
+	z-index: 10000;
 }
 
 nav ul{
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
+
 nav li{
 	width: 180px;
-	justify-content: center;
 	list-style-type: none;
+}
+
+nav ul li{
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	line-height: 60px;
 }
 
 nav ul li a{
 	width: 100%;
-	font: var(--font);
+	color: var(--text-color);
+	background-color: var(--background-color);
+	font: var(--font-light);
 	font-size: 24px;
+	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: var(--text-color);
 	display: block;
-	text-align: center;
+	box-sizing: border-box;
 }
 
 nav ul li a:hover{
 	color: var(--hover-color);
+	background-color: rgb(220,220,220);
 	text-decoration: none;
+}
+
+.dropdown{
+	display: none;
+	z-index: 10;
+	flex: 1;
+}
+
+.dropdown li a{
+	font-size: 16px;
+}
+
+nav ul li:hover .dropdown{
+	display: block;
+}
+
+.fas{
+	position: absolute;
+	display: none;
+}
+
+nav ul li a.active{
+	background-color: rgb(104,74,70);
 }
 
 /* ----- Main ----- Jermain */
@@ -111,4 +173,50 @@ footer div{
 	height: 75px;
 	position: absolute;
 	bottom: 0;
+}
+
+
+/* --- Media queries --- */
+
+@media screen and (max-width: 890px){
+
+}
+
+@media screen and (max-width: 768px){
+	nav>ul{
+		visibility: hidden;
+		opacity: 0;
+		flex-direction: column;
+	}
+	
+	nav .fas{
+		display: block;
+		font-size: 30px;
+		margin: 10px;
+		color: rgb(255,207,17);
+		z-index: 1;
+	}
+	
+	nav:hover>ul{
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
+	
+	nav:hover+div {
+		margin-top: 500px;
+		transition: margin-top 1s;
+	}
+	
+	nav>ul>li, nav>ul>li>a, .dropdown{
+		display: block;
+	}
+	
+	.dropdown li a{
+		background-color: rgb(54,55,48);
+	}
+}
+
+@media screen and (max-width: 460px){
+
 }
