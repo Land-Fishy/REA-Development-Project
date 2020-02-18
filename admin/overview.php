@@ -49,6 +49,7 @@ $books = getBookInformation($db);
   </head>
   <body>
 	<?php include '../include/logoutForm.php'; ?>
+	<a href="addBook.php">Add a book</a>
     <h1>All books</h1>
     <?php echo overviewmaker($books) ?>   
   </body>
