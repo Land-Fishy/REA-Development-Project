@@ -1,0 +1,8 @@
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
+SQLSTATE[HY000] [1049] Unknown database 'lewiswolfe'
