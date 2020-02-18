@@ -3,8 +3,6 @@
 include '../include/db.php';
 include '../include/functies/functies.php';
 
-
-
 function overviewmaker($data){
     $html = '';
     foreach($data as $v){
@@ -15,7 +13,7 @@ function overviewmaker($data){
         $html .= '<p>release date: '.$v['release_date'].'</p>';
         $html .= '<p>title: '.$v['title'].'</p>';
         $html .= '<p>'.$v['description'].'</p>';       
-        $html .= '<form><input type="hidden" name="id" value="'.$v['id'].'"'.'><input type="submit" value="Edit this book"></form>';
+        $html .= '<form action="editBook.php"><input type="hidden" name="book" value="'.$v['id'].'"'.'><input type="submit" value="Edit this book"></form>';
         $html .= '<div>';
         $html .= '</section>';
     }
