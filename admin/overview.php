@@ -7,7 +7,9 @@ function overviewmaker($data){
     $html = '';
     foreach($data as $v){
         $html .= '<section class="book">';
-        $html .= '<img src="http://'.makeBookImgLink($v['image']).'">';
+        if(file_exists('../images/books/'.$v['image'])) {
+            $html .= '<img src="http://'.makeBookImgLink($v['image']).'">';
+        }
         $html .= '<div>';
         $html .= '<p>'.$v['asin'].'</p>';
         $html .= '<p>release date: '.$v['release_date'].'</p>';
@@ -19,11 +21,6 @@ function overviewmaker($data){
     }
     return $html;
 }
-
-
-
-
-
 
 $books = getBookInformation($db);
 
