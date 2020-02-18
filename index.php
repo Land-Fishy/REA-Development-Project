@@ -16,7 +16,7 @@ include 'include/functies/functies.php';
     <div class="container">
       <?php require_once 'include/header.php';?>
       <main>
-      
+			
       </main>
       <?php require_once 'include/footer.php';?>
     </div>

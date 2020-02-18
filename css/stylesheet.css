@@ -1,4 +1,56 @@
-/* Nav Element */
+/* CSS Variable */
+:root {
+	--text-color: rgb(220,220,220);
+	--amazon-text: rgb(240, 136, 4);
+	--background-color: rgb(10,9,13);
+	--font: font: "candara light";
+	--hover-color: ;
+}
+
+body{
+	font-family: "candara light";
+	background-color: rgb(238, 238, 238);
+	overflow-x: hidden;
+	margin: 0;
+}
+
+/* ----- Header ----- */
+
+header{
+	width: 100%;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-image: url(../images/HeaderBG.png);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header h1{
+	font-family: "candara light";
+	font-size: 75px;
+	margin: 0;
+	color: var(--text-color);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: var(--background-color);
+}
+
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-top: 70px solid var(--background-color);
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+/* ----- Nav ----- */
+
 nav{
 	z-index: 10000;
 	height: 50px;
@@ -7,6 +59,7 @@ nav{
 	align-items: center;
 	background-color: var(--background-color);
 }
+
 nav ul{
 	width: 100%;
 	height: 100%;
@@ -31,80 +84,18 @@ nav ul li a{
 	display: block;
 	text-align: center;
 }
+
 nav ul li a:hover{
 	color: var(--hover-color);
 	text-decoration: none;
 }
-.triangle{
-  width: 0; 
-  height: 0; 
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 70px solid var(--background-color);
-  z-index: 1000;
-  margin: 0 auto;
-}
-/* Head element */
-header{
-	width: 100%;
-	height: 75vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	background-image: url(../images/HeaderBG.png);
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
-header h1{
-	font-family: "candara light";
-	font-size: 75px;
-	margin: 0;
-	color: var(--text-color);
-	text-align: center;
-	text-transform: uppercase;
-	background-color: var(--background-color);
-}
-/* CSS Variable */
-:root {
-	--text-color: rgb(220,220,220);
-	--amazon-text: rgb(240, 136, 4);
-	--background-color: rgb(10,9,13);
-	--font: font: "candara light";
-	--hover-color: ;
-}
-/* Main Element */
-main{
-	height: auto;
-}
-/* Main Text styling */
-figcaption{
-	font-size: 47px;
-	color: var(--text-color);
-	background-color: var(--background-color);
-	text-align: center;
-	margin-top: 1%;
-}
-/* Book Element */
-figure{
-	height: 100%;
-	padding: 10px;
-}
-figure img{
-	height: 100%;
-	width: 100%;
-}
-figure:hover{
-	transform: scale(1.1);
-	transition: 1s;
-	z-index: 1;
-}
-main .container-fluid{
-	padding: 3%;
-}
-/* Footer Element */
+/* ----- Main ----- Jermain */
+
+
+
+/* ----- Footer ----- */
+
 footer{
 	height: 706px;
 	width: 100vw;
@@ -114,13 +105,10 @@ footer{
 	background-size: cover;
 	background-image: url(../images/FooterBGs.png);
 }
+
 footer div{
 	width: 100vw;
 	height: 75px;
 	position: absolute;
 	bottom: 0;
-}
-/* Footer text styling */ 
-footer p{
-	color: orange;
 }
