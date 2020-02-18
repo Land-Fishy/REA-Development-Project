@@ -1,3 +1,7 @@
+<?php
+include 'include/db.php';
+include 'include/functies/functies.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,8 +22,7 @@
       </div>
       <?php require_once 'include/nav.php';?>
     	<header>
-    		<?php require_once 'include/header.php'; 
-    		?>
+    		<?php require_once 'include/header.php'; ?>
     	</header>
     	<main>
         <div class="col-md-2"></div>

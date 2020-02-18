@@ -3,9 +3,8 @@
 function makeLatest($db){
     $latest = getLatest($db);
     $html ='';
-    $html .= '<div class="">';
     $html .= '<div class="latest">';
-    $html .= '<img src="books/'.$latest['image'].'">';
+    $html .= '<img src="'.makeBookImgLink($latest['image']).'">';
     $html .= '</div>';
     $html .= '<div class="latest-text">';
     $html .= '<h1>Wolfe\'s latest</h1>';
@@ -15,6 +14,6 @@ function makeLatest($db){
     $html .= '</div>';
     $html .= '<a href="'.makeAmazonLink($latest['asin']).'">get on amazon now!</a>';
     $html .= '</div>';
-    $html .= '</div>';
     return $html;
 }
+

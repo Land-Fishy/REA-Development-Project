@@ -1,5 +1,6 @@
 <div class="header-image"></div>
-<div class="latest-release">
+<?php echo makeLatest($db); ?>
+<!--<div class="latest-release">
 	<div class="latest">
 		<img src="images/newbook.jpg">
 	</div>
@@ -9,5 +10,5 @@
 			<p>lorem ipsum</p>
 		</div>
 		<a href="#">get on amazon now!</a>
-	</div>
+	</div>-->
 </div>
