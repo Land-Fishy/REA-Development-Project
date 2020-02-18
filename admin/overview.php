@@ -10,7 +10,7 @@ function overviewmaker($data){
     foreach($data as $v){
         $html .= '<section class="book">';
         if(file_exists('../images/books/'.$v['image'])) {
-            $html .= '<img src="http://'.makeBookImgLink($v['image']).'">';
+            $html .= '<img src="'.makeBookImgLink($v['image']).'">';
         }
         $html .= '<div>';
         $html .= '<p>'.$v['asin'].'</p>';
