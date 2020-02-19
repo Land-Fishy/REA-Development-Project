@@ -173,9 +173,38 @@ main{
 	min-height: 500px;
 	background-color: rgb(238,238,238);
 	padding: 20px;
-	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
-
+figure{
+	flex: 1 0 23%;
+	align-items: center;
+	height: auto;
+	width: 100%;
+	margin-top: 50px;
+}
+figure:hover{
+	transform: scale(1.1);
+	transition: 1s;
+	z-index: 1;
+}
+figure img{
+	height: 640px;
+	width: 400px;
+}
+figcaption{
+	height: 80px;
+	width: 400px;
+	font-size: 30px;
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: var(--background-color);
+}
 
 /* ----- Footer ----- */
 
@@ -218,8 +247,24 @@ footer a:hover, footer a:active{
 
 /* --- Media queries --- */
 
-@media screen and (max-width: 890px){
-
+@media screen and (max-width: 1020px){
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+	figure{
+		height: auto;
+		width: 250px;
+	}
+	figure img{
+		height: 440px;
+		width: 250px;
+	}
+	figcaption{
+		font-size: 20px;
+		height: 50px;
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 768px){	

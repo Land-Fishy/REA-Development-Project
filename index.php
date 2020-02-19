@@ -15,7 +15,22 @@ include 'include/db.php';
     <div class="container">
 		<?php require_once 'include/header.php';?>
 		<main>
-			
+			 <figure>
+          <img src="images/books/newbook.jpg">
+          <figcaption>a monster escapes</figcaption>
+      </figure>
+      <figure>
+          <img src="images/books/newbook.jpg">
+          <figcaption>a monster escapes</figcaption>
+      </figure>
+        <figure>
+          <img src="images/books/newbook.jpg">
+          <figcaption>a monster escapes</figcaption>
+      </figure>
+      <figure>
+        <img src="images/books/newbook.jpg">
+        <figcaption>a monster escapes</figcaption>
+      </figure>
 		</main>
       <?php require_once 'include/footer.php';?>
     </div>
