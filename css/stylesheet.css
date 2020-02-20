@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
 	margin: 0 auto;
 	display: flex;
@@ -25,7 +25,7 @@ body{
 /* ----- Header ----- */
 
 header{
-	width: 100%;
+	width: 100vw;
 	height: 80vh;
 	display: flex;
 	flex-direction: column;
@@ -171,31 +171,41 @@ nav ul li a.active{
 
 main{
 	min-height: 500px;
+	width: 100%;
 	background-color: rgb(238,238,238);
 	padding: 20px;
+	margin: 0 auto;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
+	box-sizing: border-box;
+	justify-content: center;
 }
+
 figure{
-	flex: 1 0 23%;
+	width: 30%;
 	align-items: center;
 	height: auto;
-	width: 100%;
-	margin-top: 50px;
+	margin: 25px 0;
+	padding: 20px;
+	justify-content: center;
+	box-sizing: border-box;
 }
+
 figure:hover{
 	transform: scale(1.1);
 	transition: 1s;
 	z-index: 1;
 }
+
 figure img{
-	height: 640px;
-	width: 400px;
+	width: 100%;
 }
+
 figcaption{
 	height: 80px;
-	width: 400px;
+	width: 100%;
 	font-size: 30px;
 	color: var(--text-color);
 	display: flex;
@@ -204,6 +214,10 @@ figcaption{
 	text-align: center;
 	text-transform: uppercase;
 	background-color: var(--background-color);
+}
+
+#index main{
+	padding: 0 15%;
 }
 
 /* ----- Footer ----- */
@@ -246,24 +260,31 @@ footer a:hover, footer a:active{
 }
 
 /* --- Media queries --- */
+@media screen and (max-width: 1750px){
+	#index main{
+		padding: 0 5%;
+	}
+}
 
-@media screen and (max-width: 1020px){
-	main{
-		display: flex;
+@media screen and (max-width: 1400px){
+	#index main{
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	figure{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 850px){
+	#index main{
 		flex-direction: column;
 	}
+	
 	figure{
-		height: auto;
-		width: 250px;
-	}
-	figure img{
-		height: 440px;
-		width: 250px;
-	}
-	figcaption{
-		font-size: 20px;
-		height: 50px;
-		width: auto;
+		width: 400px;
 	}
 }
 
@@ -334,5 +355,26 @@ footer a:hover, footer a:active{
 	header h1{
 		font-size: 30px;
 		transition: font-size 2s;
+	}
+	
+	figure{
+		width: 340px;
+	}
+}
+
+@media screen and (max-width: 400px){	
+	figure{
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	header h1{
+		font-size: 30px;
+		transition: font-size 2s;
+	}
+	
+	figure{
+		width: 280px;
 	}
 }
