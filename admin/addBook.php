@@ -28,6 +28,24 @@ include '../include/functies/unsetRedirect.php';
 			}
 		}
 ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit book</title>
+    <style>
+     form{
+         display: flex;
+         flex-direction: column;
+     }
+     #cover{
+         height: auto;
+         width: 200px;
+     }
+    </style>
+  </head>
+  <body>
+		<h1>Add a book</h1>
 		<form method="post" enctype="multipart/form-data">
 			<label for="title">Title</label>
 			<input type="text" name="title" id="title">
@@ -63,3 +81,6 @@ include '../include/functies/unsetRedirect.php';
 		<?php
 			echo $error;
 		?>
+		<a href="overview.php">Back to overview</a>
+	</body>
+</html>

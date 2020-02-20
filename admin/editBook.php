@@ -22,7 +22,7 @@ try{
     }
     
     $genre = getGenre($db);
-
+	$success = '';
     $dir = '../images/books/';
     if(isset($_POST['upload']) && !empty($_FILES['image'])){
         $bestand = $_FILES['image'];
@@ -41,6 +41,7 @@ try{
         $stmt->bindParam(8, $_POST['sub'], PDO::PARAM_INT);
         $stmt->execute();
 		header("Refresh:0");
+		$success = '<p>Book edited.</p>';
     }
     $db = null;
     $stmt = null;
@@ -67,6 +68,8 @@ try{
     </style>
   </head>
   <body>
+	<?= $success;?>
+	<h1>Edit a book</h1>
     <form method="post" enctype="multipart/form-data">
       <label for="title">Title</label>
       <input type="text" name="title" id="title" value="<?= $book['title'];?>">
