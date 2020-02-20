@@ -1,12 +1,17 @@
 <?php
-	require_once 'getGenre.php';
-	$dir = 'images/books/';
+require_once '../include/db.php';
+require_once '../include/functies/getGenre.php';
+require_once '../include/functies/getBookInformation.php';
+include '../include/functies/sessionStart.php';
+include '../include/functies/unsetRedirect.php';
+	
+	$dir = '../images/books/';
 	$error = '';
 		if(isset($_POST['upload']) && !empty($_FILES['image'])){
 			$bestand = $_FILES['image'];
 			if(substr($bestand['type'], 0, 5) == 'image'){
 				move_uploaded_file($bestand['tmp_name'], $dir.$bestand['name']);
-				$stmt = $db->prepare("INSERT INTO books (image, title, release_date, description, amazon_code, pagecount, genre, subgenre) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+				$stmt = $db->prepare("INSERT INTO books (image, title, release_date, description, asin, pagecount, genre, subgenre) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 				$stmt->bindParam(1, $bestand['name'], PDO::PARAM_STR);
 				$stmt->bindParam(2, $_POST['title'], PDO::PARAM_STR);
 				$stmt->bindParam(3, $_POST['date'], PDO::PARAM_STR);
@@ -16,8 +21,8 @@
 				$stmt->bindParam(7, $_POST['genre'], PDO::PARAM_INT);
 				$_POST['sub'] = empty($_POST['sub']) ? NULL : $_POST['sub'];  
 				$stmt->bindParam(8, $_POST['sub'], PDO::PARAM_INT);
-				
 				$stmt->execute();
+				header("location: overview.php");
 			}else{
 				$error = '<p>The posted file was not an image.</p>';
 			}

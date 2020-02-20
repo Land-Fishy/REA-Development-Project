@@ -1,14 +1,13 @@
-<div class="header-image"></div>
-<?php echo makeLatest($db); ?>
-<!--<div class="latest-release">
-	<div class="latest">
-		<img src="images/newbook.jpg">
+<header> 
+	<h1>Lewis Wolfe</h1>
+	<?php require_once 'include/nav.php';?>
+	<div class="triangle"></div>
+	<div class="gradient"></div>
+	<div class="arrow">
+		<div></div>
+		<svg width="140" height="80">
+			<polygon points="0,0 70,70 140,0 140,80 0,80" style="fill:rgb(238,238,238)" />
+		</svg>
+		<div></div>
 	</div>
-	<div class="latest-text">
-		<h1>Wolfe's latest</h1>
-		<div class="latest-box">
-			<p>lorem ipsum</p>
-		</div>
-		<a href="#">get on amazon now!</a>
-	</div>-->
-</div>
+</header>

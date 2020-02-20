@@ -1,14 +1,16 @@
 <?php
-
 include '../include/db.php';
 include '../include/functies/functies.php';
+include '../include/functies/sessionStart.php';
+include '../include/functies/logout.php';
+include '../include/functies/unsetRedirect.php';
 
 function overviewmaker($data){
     $html = '';
     foreach($data as $v){
         $html .= '<section class="book">';
         if(file_exists('../images/books/'.$v['image'])) {
-            $html .= '<img src="http://'.makeBookImgLink($v['image']).'">';
+            $html .= '<img src="'.makeBookImgLink($v['image']).'">';
         }
         $html .= '<div>';
         $html .= '<p>'.$v['asin'].'</p>';
@@ -46,6 +48,8 @@ $books = getBookInformation($db);
       
   </head>
   <body>
+	<?php include '../include/logoutForm.php'; ?>
+	<a href="addBook.php">Add a book</a>
     <h1>All books</h1>
     <?php echo overviewmaker($books) ?>   
   </body>
