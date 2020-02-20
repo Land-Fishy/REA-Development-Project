@@ -65,7 +65,7 @@ header h1{
 }
 
 .gradient{
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	background: rgb(10,9,13);
 	background: linear-gradient(90deg, rgba(10,9,13,1) 0%, rgba(10,9,13,1) 57%, rgba(10,9,13,0.55) 88%, rgba(10,9,13,0.2) 100%);
@@ -94,7 +94,7 @@ header h1{
 
 nav{
 	height: 60px;
-	width: 100vw;
+	width: 100%;
 	background-color: var(--background-color);
 	justify-content: center;
 	align-items: center;
@@ -169,20 +169,23 @@ nav ul li a.active{
 
 /* ----- Main ----- Jer Main */
 
-main{
+.main{
 	min-height: 500px;
+	width: 100%;
 	background-color: rgb(238,238,238);
 	padding: 20px;
+	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	box-sizing: border-box;
 }
 figure{
 	flex: 1 0 23%;
 	align-items: center;
 	height: auto;
-	width: 100%;
-	margin-top: 50px;
+	margin: 25px auto;
+	justify-content: center;
 }
 figure:hover{
 	transform: scale(1.1);
@@ -246,26 +249,20 @@ footer a:hover, footer a:active{
 }
 
 /* --- Media queries --- */
-
-@media screen and (max-width: 1020px){
-	main{
-		display: flex;
-		flex-direction: column;
-	}
-	figure{
-		height: auto;
-		width: 250px;
-	}
-	figure img{
-		height: 440px;
-		width: 250px;
-	}
-	figcaption{
-		font-size: 20px;
-		height: 50px;
-		width: auto;
+/*@media screen and (max-width: 1350px){
+	.main{
+		display: grid;
+		grid-template-columns: auto auto;
 	}
 }
+
+@media screen and (max-width: 1020px){
+	.main{
+		display: grid;
+		grid-template-columns: auto;
+		padding: 
+	}
+}*/
 
 @media screen and (max-width: 768px){	
 	header h1{
