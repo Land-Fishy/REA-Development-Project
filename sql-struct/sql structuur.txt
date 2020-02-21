@@ -1,0 +1,38 @@
+-about
+	-id
+	-text
+
+-books
+	-id
+	-author
+	-image
+	-title
+	-release_date
+	-genre
+	-description
+	-asin
+	-language
+	
+-characters
+	-id
+	-books_id
+	-name
+	
+-genres
+	-id
+	-genre
+
+-menu
+	-id
+	-item
+	-type
+	-slug
+
+-menu_type
+	-id
+	-menu_type
+
+-users
+	-id
+	-username
+	-password
