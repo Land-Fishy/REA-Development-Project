@@ -5,7 +5,7 @@
 	--background-color: rgb(10,9,13);
 	--h1-color: rgb(10,9,13);
 	--font-light: "candara light";
-	--hover-color: ;
+	--input-background: rgb(238, 238, 238);
 }
 
 body{
@@ -168,6 +168,43 @@ nav ul li:hover .dropdown{
 nav ul li a.active{
 	background-color: rgb(55,54,57);
 }
+/* ----- Contact ----- */
+.contact{
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.contact p{
+	color: var(--background-color);
+	font-size: var(--font-size);
+}
+.contact h1{
+	color: var(--h1-color);
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.contact h1, p{
+	text-align: center;
+}
+.contact form{
+	display: flex;
+	flex-direction: column;
+}
+.contact label{
+	margin-top: 5px;
+	margin-bottom: 5px; 
+}
+.contact input[type="text"], input[type="email"], textarea{
+	background-color: var(--input-background);
+	border-radius: 5px;
+	font-size: 15px;
+}
+.contact input[type="text"], input[type="email"]{
+	border: 1px solid rgb(169, 169, 169);
+	height: 30px;
+}
 /* ----- About me / Books ----- */
 .content{
 	width: 1200px;
@@ -299,6 +336,13 @@ footer a:hover, footer a:active{
 }
 
 /* --- Media queries --- */
+@media screen and (max-width: 850px){
+	.contact{
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
 @media screen and (max-width: 1000px){
 	.content iframe{
 		width: 336px;
