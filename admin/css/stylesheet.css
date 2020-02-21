@@ -1,0 +1,110 @@
+body{
+	color: black;
+	background-color: rgb(238,238,238);
+	font-family: candara, sans-serif;
+	font-size: 18px;
+}
+
+.container{
+	width: 798px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+}
+
+a, input[type="submit"]{
+	width: 266px;
+	height: 50px;
+	color: rgb(238,238,238);
+	background-color: rgb(10,9,13);
+	font-family: candara, sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 50px;
+	margin: 5px;
+	display: block;
+	border: none;
+}
+
+a:hover, input[type="submit"]:hover{
+	color:rgb(10,9,13);
+	background-color: rgb(236,236,236);
+}
+
+h1{
+	text-align: center;
+}
+
+.book img{
+	height: 400px;
+	margin: 10px;
+}
+
+section.book{
+	width: 788px;
+	background-color: rgb(123,137,150);
+	margin: 20px 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+
+
+.book form div label, .book form div input{
+	width: 50%;
+}
+
+.book div, #remove{
+	width: 250px;
+	padding: 20px;
+	display:flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+#remove div{
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+#confirm{
+	width: 20px;
+	height: 30px;
+	margin: 0 10px;
+	border: none;
+	position: absolute;
+	top: 10px;
+	right: 100px;
+}
+
+.book p::first-letter, .book label::first-letter, .book legend::first-letter{
+	text-transform: capitalize;
+}
+
+.book p, .book label{
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 5px;
+}
+
+p.description{
+	height: 150px;
+	overflow-y: auto;
+}
+
+.book a, .book input[type="submit"]{
+	width: 200px;
+	margin: 0;
+}

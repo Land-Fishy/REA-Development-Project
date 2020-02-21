@@ -3,6 +3,7 @@
 	--text-color: rgb(220,220,220);
 	--amazon-text: rgb(240,136,4);
 	--background-color: rgb(10,9,13);
+	--h1-color: rgb(10,9,13);
 	--font-light: "candara light";
 	--hover-color: ;
 }
@@ -166,7 +167,42 @@ nav ul li:hover .dropdown{
 nav ul li a.active{
 	background-color: rgb(55,54,57);
 }
-
+/* ----- About me / Books ----- */
+.content{
+	width: 1200px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.content h1{
+	font: var(--font-light);
+	font-size: 50px;
+	text-align: center;
+	color: var(--h1-color);
+	text-transform: uppercase;
+}
+.content p{
+	font-size: 20px;
+	color: var(--background-color);
+	padding: 0;
+}
+.about-me p:first-child{
+	margin-top: 0px;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.about-me{
+	width: 450px;
+	padding: 25px;
+}
+.content img{
+	max-height: 500px;
+	max-width: 500px;
+	padding: 25px;
+}
 /* ----- Main ----- Jer Main */
 
 main{
@@ -192,7 +228,9 @@ figure{
 	justify-content: center;
 	box-sizing: border-box;
 }
-
+figure a{
+	text-decoration: none;
+}
 figure:hover{
 	transform: scale(1.1);
 	transition: 1s;
@@ -260,6 +298,65 @@ footer a:hover, footer a:active{
 }
 
 /* --- Media queries --- */
+@media screen and (max-width: 1000px){
+	.content iframe{
+		width: 336px;
+		height: 550px;
+	}
+}
+@media screen and (max-width: 1100px){
+	.about-me{
+		width: auto;
+		height: 400px;
+	}
+	.content img{
+		height: 400px;
+		width: 400px;
+	}
+	.row{
+		display: flex;
+		flex-direction: row;
+		justify-content: unset;
+	}
+}
+
+@media screen and (max-width: 920px){
+	.content{
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.about-me{
+		width: 500px;
+		height: auto;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.content img{
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	.row{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 550px){
+	.content{
+		width: 100vw;
+	}
+	.about-me{
+		width: 100%;
+	}
+	.content img{
+		height: 100%;
+		width: 100%;
+	}
+}
 @media screen and (max-width: 1750px){
 	#index main{
 		padding: 0 5%;
