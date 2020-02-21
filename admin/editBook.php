@@ -36,7 +36,7 @@ try{
         $stmt->bindParam(4, $_POST['desc'], PDO::PARAM_STR);
         $stmt->bindParam(5, $_POST['asin'], PDO::PARAM_STR);
 
-        $stmt->bindParam(7, $_POST['genre'], PDO::PARAM_INT);
+        $stmt->bindParam(6, $_POST['genre'], PDO::PARAM_INT);
         $stmt->execute();
 		header("Refresh:0");
 		$success = '<p>Book edited.</p>';

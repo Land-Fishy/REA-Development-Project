@@ -10,3 +10,5 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') WHERE id = 4' at line 1
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') WHERE id = 1' at line 1
 SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(image='newbook.jpg', title='Test bericht', release_date='2020-02-14', descripti' at line 1
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
