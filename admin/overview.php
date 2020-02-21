@@ -1,9 +1,9 @@
 <?php
 include '../include/db.php';
-include '../include/functies/functies.php';
-include '../include/functies/sessionStart.php';
-include '../include/functies/logout.php';
-include '../include/functies/unsetRedirect.php';
+include './functies/functies.php';
+include './functies/sessionStart.php';
+include './functies/logout.php';
+include './functies/unsetRedirect.php';
 
 function overviewmaker($data){
     $html = '';
