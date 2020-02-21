@@ -1,0 +1,37 @@
+/* CSS Variable */
+:root {
+	--text-color: rgb(220,220,220);
+	--amazon-text: rgb(240,136,4);
+	--background-color: rgb(10,9,13);
+	--font-light: "candara light";
+	--hover-color: ;
+}
+
+/*cookie alert notification */
+
+#cookie-understand {
+	padding: 5px;
+	margin: 0;
+	color: var(--text-color);
+	background: rgb(55,54,57);
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 10px;
+	opacity: 0.8;
+}
+#cookie-understand:hover {
+	opacity: 1;
+}
+.cookie-bar{
+	display: block;
+	z-index: 1;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 110px;
+	background: var(--background-color);
+	color: var(--text-color);
+	font-size: 1rem;
+	text-align: center;
+}	
