@@ -17,10 +17,18 @@ include 'include/db.php';
     <main>
       <div class="content">
         <h1 class="title">lewis wolfe</h1>
-       <div class="about-me">
-         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="row">
+         <div class="about-me">
+          <p>Writing is a mysterious business. It's about diving deep into your own mind, sometimes your heart too, and putting whatever you find into words. Words that are put out into the world for all those interested to see. Stories, in this sense, are always a reflection of the person telling them.</p>
+
+          <p>There comes a time in your life when you will hear your calling. You'll either listen, or you won't. Lewis Wolfe heard his years ago and found himself unable to resist it. He had to write stories. Short ones and long ones. They were all just practice for his first novel, A Monster Escapes.</p>
+
+          <p>Lewis Wolfe believes that characters shape the story, never the other way around. Suspense and horror, then, are a natural extension of how people decide to lead their lives, be they real or imagined.</p>
+
+          <p>Consider following Lewis Wolfe on his journey as a storyteller. He would be honored.</p>
+         </div>
+         <img src="images/sexy.jpg">
        </div>
-       <img src="images/sexy.jpg">
     </div>
     </main>
       <?php require_once 'include/footer.php';?>
