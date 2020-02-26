@@ -3,27 +3,31 @@ require_once '../include/db.php';
 require_once './functies/getGenre.php';
 require_once './functies/getBookInformation.php';
 include './functies/sessionStart.php';
+include './functies/slugger.php';
 include './functies/unsetRedirect.php';
-	
-	$dir = '../images/books/';
-	$error = '';
-		if(isset($_POST['upload']) && !empty($_FILES['image'])){
-			$bestand = $_FILES['image'];
-			if(substr($bestand['type'], 0, 5) == 'image'){
+
+$dir = '../images/books/';
+$error = '';
+if(isset($_POST['upload']) && !empty($_FILES['image'])){
+		$bestand = $_FILES['image'];
+		if(substr($bestand['type'], 0, 5) == 'image'){
+        $slugged = slugger($_POST['title']);
+        
 				move_uploaded_file($bestand['tmp_name'], $dir.$bestand['name']);
-				$stmt = $db->prepare("INSERT INTO books (image, title, release_date, description, asin, genre) VALUES (?, ?, ?, ?, ?, ?)");
+				$stmt = $db->prepare("INSERT INTO books (image, title, release_date, description, asin, genre, slug) VALUES (?, ?, ?, ?, ?, ?, ?)");
 				$stmt->bindParam(1, $bestand['name'], PDO::PARAM_STR);
 				$stmt->bindParam(2, $_POST['title'], PDO::PARAM_STR);
 				$stmt->bindParam(3, $_POST['date'], PDO::PARAM_STR);
 				$stmt->bindParam(4, $_POST['desc'], PDO::PARAM_STR);
 				$stmt->bindParam(5, $_POST['asin'], PDO::PARAM_STR);
 				$stmt->bindParam(6, $_POST['genre'], PDO::PARAM_INT);
+        $stmt->bindParam(7, $slugged);
 				$stmt->execute();
 				header("location: overview.php");
-			}else{
+		}else{
 				$error = '<p>The posted file was not an image.</p>';
-			}
 		}
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,15 +61,15 @@ include './functies/unsetRedirect.php';
 			<label for="genre">Genre</label>
 			<select name="genre" id="genre">
 				<?php
-					foreach(getGenre($db) as $key=>$value){
+				foreach(getGenre($db) as $key=>$value){
 						echo '<option value='.$value['id'].'">'.$value['genre'].'</option>';
-					}
+				}
 				?>
 			</select>
 			<input type="submit" name="upload" value="submit" id="upload">
 		</form>
 		<?php
-			echo $error;
+		echo $error;
 		?>
 		<a href="overview.php">Back to overview</a>
 	</body>
