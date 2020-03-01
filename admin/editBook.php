@@ -3,6 +3,7 @@ require_once '../include/db.php';
 require_once './functies/getGenre.php';
 require_once './functies/getBookInformation.php';
 include './functies/sessionStart.php';
+include './functies/slugger.php';
 include './functies/unsetRedirect.php';
 
 
@@ -18,28 +19,28 @@ try{
         $stmt->execute();
         $f = $stmt->fetch(PDO::FETCH_ASSOC);
         $book = getBookInformationId($db,  $f['id']);
-        
     }
-    
+
     $genre = getGenre($db);
-	$success = '';
+    $success = '';
     $dir = '../images/books/';
     if(isset($_POST['upload']) && !empty($_FILES['image'])){
         $bestand = $_FILES['image'];
         $bookid = $book['id'];
+        $slugged = slugger($_POST['title']);
         move_uploaded_file($bestand['tmp_name'], $dir.$bestand['name']);
-        $stmt = $db->prepare("UPDATE books SET image=?, title=?, release_date=?, description=?, asin=?, genre=? WHERE id = $bookid");
+        $stmt = $db->prepare("UPDATE books SET image=?, title=?, release_date=?, description=?, asin=?, genre=?, slug=? WHERE id = $bookid");
         $bestand['name'] = empty($bestand['name']) ? $book['image'] : $bestand['name'];
         $stmt->bindParam(1, $bestand['name'], PDO::PARAM_STR);
         $stmt->bindParam(2, $_POST['title'], PDO::PARAM_STR);
         $stmt->bindParam(3, $_POST['date'], PDO::PARAM_STR);
         $stmt->bindParam(4, $_POST['desc'], PDO::PARAM_STR);
         $stmt->bindParam(5, $_POST['asin'], PDO::PARAM_STR);
-
         $stmt->bindParam(6, $_POST['genre'], PDO::PARAM_INT);
+        $stmt->bindParam(7, $slugged);
         $stmt->execute();
-		header("Refresh:0");
-		$success = '<p>Book edited.</p>';
+        header("Refresh:0");
+        $success = '<p>Book edited.</p>';
     }
     $db = null;
     $stmt = null;
@@ -66,8 +67,8 @@ try{
     </style>
   </head>
   <body>
-	<?= $success;?>
-	<h1>Edit a book</h1>
+    <?= $success;?>
+    <h1>Edit a book</h1>
     <form method="post" enctype="multipart/form-data">
       <label for="title">Title</label>
       <input type="text" name="title" id="title" value="<?= $book['title'];?>">
@@ -94,6 +95,6 @@ try{
       </select>
       <input type="submit" name="upload" value="submit" id="upload">
     </form>
-	<a href="overview.php">Back to overview</a>
+    <a href="overview.php">Back to overview</a>
   </body>
 </html>
