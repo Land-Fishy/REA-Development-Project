@@ -237,6 +237,7 @@ nav ul li a.active{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin: 0 auto;
 }
 .about-me{
 	width: 450px;
@@ -246,6 +247,28 @@ nav ul li a.active{
 	max-height: 500px;
 	max-width: 500px;
 	padding: 25px;
+}
+.content iframe, table{
+	padding: 20px;
+	margin: 20px;
+}
+.content table{
+	max-width: 500px;
+}
+.content .right{
+	text-align: right;
+	padding-right: 2px;
+	width: 200px;
+	vertical-align: top;
+	color: var(--h1-color);
+}
+.content th{
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 50px;
+}
+.content td{
+	font-size: 16px;
 }
 /* ----- Main ----- Jer Main */
 
