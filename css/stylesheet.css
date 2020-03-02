@@ -324,7 +324,19 @@ figcaption{
 #index main{
 	padding: 0 15%;
 }
-
+/* ----- News Letter CSS ----- */
+#mc_embed_signup{ 
+	clear: left; 
+	font: 14px Helvetica,Arial,sans-serif; 
+	width: 100%;
+	margin-top: 5%;
+	z-index: 1;
+}
+#mc_embed_signup label{
+	font-size: 30px !important;
+	font-family: candara;
+	color: var(--text-color) !important;
+}
 /* ----- Footer ----- */
 
 footer{
@@ -365,6 +377,19 @@ footer a:hover, footer a:active{
 }
 
 /* --- Media queries --- */
+@media screen and (max-width: 768px){
+	#mc_embed_signup input.email{
+		width: 300px !important;
+	}
+	#mc_embed_signup .button{
+		width: 150px !important;
+	}
+}
+@media screen and (max-width: 350px){
+	#mc_embed_signup input.email{
+		padding: 0;
+	}
+}
 @media screen and (max-width: 850px){
 	.contact{
 		width: 100%;
