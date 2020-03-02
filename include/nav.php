@@ -1,5 +1,5 @@
 <nav>
-	<i class="fas fa-bars"></i>
+    <i class="fas fa-bars"></i>
   <ul>
     <li><a href="">home</a></li>
     <li><a href="">boeken</a>
