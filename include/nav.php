@@ -1,8 +1,3 @@
-<?php
-$stmt = $db->prepare('SELECT * FROM menu');
-$stmt->execute();
-$menu = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
 <nav>
 	<i class="fas fa-bars"></i>
   <ul>
