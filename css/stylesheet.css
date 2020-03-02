@@ -1,9 +1,8 @@
 /* CSS Variable */
 :root {
-	--text-color: rgb(220,220,220);
+	--light-color: rgb(220,220,220);
 	--amazon-text: rgb(240,136,4);
-	--background-color: rgb(10,9,13);
-	--h1-color: rgb(10,9,13);
+	--dark-color: rgb(10,9,13);
 	--font-light: "candara light";
 	--input-background: rgb(238, 238, 238);
 }
@@ -42,8 +41,8 @@ header{
 header h1{
 	height: 130px;
 	line-height: 130px;
-	color: var(--text-color);
-	background-color: var(--background-color);
+	color: var(--light-color);
+	background-color: var(--dark-color);
 	font-family: var(--font-light);
 	font-size: 70px;
 	font-weight: normal;
@@ -60,7 +59,7 @@ header h1{
   height: 0; 
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
-  border-top: 70px solid var(--background-color);
+  border-top: 70px solid var(--dark-color);
   z-index: 1;
   margin: 0 auto;
 }
@@ -96,7 +95,7 @@ header h1{
 nav{
 	height: 60px;
 	width: 100vw;
-	background-color: var(--background-color);
+	background-color: var(--dark-color);
 	justify-content: center;
 	align-items: center;
 	position: sticky;
@@ -128,8 +127,8 @@ nav ul li{
 
 nav ul li a{
 	width: 100%;
-	color: var(--text-color);
-	background-color: var(--background-color);
+	color: var(--light-color);
+	background-color: var(--dark-color);
 	font: var(--font-light);
 	font-size: 24px;
 	text-align: center;
@@ -177,11 +176,11 @@ nav ul li a.active{
 
 }
 .contact p{
-	color: var(--background-color);
+	color: var(--dark-color);
 	font-size: var(--font-size);
 }
 .contact h1{
-	color: var(--h1-color);
+	color: var(--dark-color);
 	text-transform: uppercase;
 	font-size: 50px;
 }
@@ -222,12 +221,12 @@ nav ul li a.active{
 	font: var(--font-light);
 	font-size: 50px;
 	text-align: center;
-	color: var(--h1-color);
+	color: var(--dark-color);
 	text-transform: uppercase;
 }
 .content p{
 	font-size: 20px;
-	color: var(--background-color);
+	color: var(--dark-color);
 	padding: 0;
 }
 .about-me p:first-child{
@@ -260,7 +259,7 @@ nav ul li a.active{
 	padding-right: 2px;
 	width: 200px;
 	vertical-align: top;
-	color: var(--h1-color);
+	color: var(--dark-color);
 }
 .content th{
 	font-size: 20px;
@@ -321,13 +320,13 @@ figcaption{
 	height: 80px;
 	width: 100%;
 	font-size: 30px;
-	color: var(--text-color);
+	color: var(--light-color);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: var(--background-color);
+	background-color: var(--dark-color);
 }
 
 #index main{
@@ -344,7 +343,7 @@ figcaption{
 #mc_embed_signup label{
 	font-size: 30px !important;
 	font-family: candara;
-	color: var(--text-color) !important;
+	color: var(--light-color) !important;
 }
 /* ----- Footer ----- */
 
@@ -366,13 +365,13 @@ footer div{
 }
 
 footer p{
-	color: var(--text-color);
+	color: var(--light-color);
 	font-size: 20px;
 	letter-spacing: 3px;
 }
 
 footer a{
-	color: var(--text-color);
+	color: var(--light-color);
 	font-size: 18px;
 	letter-spacing: 2px;
 	text-decoration: none;
@@ -383,6 +382,41 @@ footer a{
 
 footer a:hover, footer a:active{
 	color: rgb(240,136,4);
+}
+
+/* Cookies */
+
+.cookie-bar{
+	width: 100vw;
+	height: 135px;
+	color: var(--light-color);
+	background: var(--dark-color);
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px;
+	bottom: 0;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 5;
+}	
+
+.cookie-bar a{
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	color: var(--dark-color);
+	background-color: var(--light-color);
+	border-radius: 2px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin: 20px auto 0;
+	display: block;
+}
+
+.cookie-bar a:hover {
+	color: var(--light-color);
+	background-color: rgba(220,220,220,0.3);
+	cursor: pointer;
 }
 
 /* --- Media queries --- */
@@ -529,7 +563,7 @@ footer a:hover, footer a:active{
 	nav .fas{
 		width: 30px;
 		height: 30px;
-		color: var(--text-color);
+		color: var(--light-color);
 		font-size: 30px;
 		margin: 15px;
 		position: absolute;
