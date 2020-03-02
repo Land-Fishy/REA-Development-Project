@@ -63,30 +63,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/LoginStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<title>Log in</title>
 	</head>
 	<body>
-		<div class="wrapper fadeInDown">
-            <div id="formContent">
-            <!-- Tabs Titles -->
-            <!-- Icon -->
-            <div class="fadeIn first">
-                <br>
-            </div>
-            <!-- Login Form -->
-            <form method="post" action="Login.php">
-                <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username" required>
-                <br>
-                <span class="error"><?php echo $username_err; ?></span>
-                <br>
-                <span class="error"><?php echo $password_err; ?></span>
-                <br>
-                <input type="password" id="password" class="fadeIn third" name="pass" placeholder="Password" required>     
-                <input type="submit" name="login" class="fadeIn fourth" value="Log In">
-            </form>
-            </div>
-        </div>                 
+		<form class="login" method="post" action="Login.php">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Username" required>
+			<span class="error"><?php echo $username_err; ?></span>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="pass" placeholder="Password" required>
+			<span class="error"><?php echo $password_err; ?></span>
+			<input type="submit" name="login" value="Log In">
+		</form>               
     </div>
   </body>
 </html>
