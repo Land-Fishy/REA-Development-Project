@@ -3,6 +3,8 @@ include 'include/db.php';
 include 'include/functies/functies.php';
 include 'include/bookid.php';
 
+print_r($_GET);
+
 if($_GET['book'] ?? false){
     $stmt = $db->prepare('SELECT b.id, b.author, b.image, b.title, b.release_date, g.genre, b.description, b.asin, b.language FROM books b JOIN genres g on b.genre = g.id WHERE b.slug = :slug');
     $stmt->bindParam(':slug',$_GET['book']);
@@ -21,7 +23,7 @@ if($_GET['book'] ?? false){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lewis Wolfe</title>
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
+    <link rel="stylesheet" type="text/css" href="<?php echo makeLink("REA-Development-Project/css/stylesheet.css") ?>" important>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <?php if($json){ echo makeJsonld($db, [$book['id']]);}?>
@@ -39,7 +41,7 @@ if($_GET['book'] ?? false){
         <ul>
           <?php foreach($book as $k => $v){
               if(in_array($k,['id','image'])) continue;
-                  echo '<li>'.$k.' - '.$v.'</li>';
+              echo '<li>'.$k.' - '.$v.'</li>';
           } ?>
         </ul>
       </main>

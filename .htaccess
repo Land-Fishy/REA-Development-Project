@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule .*book/(.+) book.php?book=$1
