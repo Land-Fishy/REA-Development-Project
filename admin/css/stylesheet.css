@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-	width: 798px;
+	width: 780px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
@@ -18,7 +18,7 @@ body{
 }
 
 a, input[type="submit"]{
-	width: 266px;
+	width: 250px;
 	height: 50px;
 	color: rgb(238,238,238);
 	background-color: rgb(10,9,13);
@@ -32,6 +32,8 @@ a, input[type="submit"]{
 	margin: 5px;
 	display: block;
 	border: none;
+	box-sizing: border-box;
+	cursor: pointer;
 }
 
 a:hover, input[type="submit"]:hover{
@@ -43,30 +45,46 @@ h1{
 	text-align: center;
 }
 
-.book img{
+.book figure{
+	width: 250px;
 	height: 400px;
-	margin: 10px;
+	margin: 0;
+}
+
+.book img{
+	width: 250px;
+	height: 400px;
 }
 
 section.book{
-	width: 788px;
-	background-color: rgb(123,137,150);
+	width: 780px;
 	margin: 20px 5px;
 	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+
+.book form div label, .book form div input{
+	width: 60%;
+}
+
+.book div, #remove{
+	display:flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.book div.info{
+	width: 512px;
+	margin-left: 10px;
+	background-color: rgb(170,170,185);
 	flex-direction: row;
 	justify-content: space-between;
 	box-sizing: border-box;
 }
 
-.book form div label, .book form div input{
-	width: 50%;
-}
-
-.book div, #remove{
-	width: 250px;
-	display:flex;
-	flex-direction: column;
-	box-sizing: border-box;
+#remove{
+	width: 180px;
 }
 
 #remove div{
@@ -83,7 +101,7 @@ section.book{
 	border: none;
 	position: absolute;
 	top: 10px;
-	right: 100px;
+	right: 20px;
 }
 
 .book p, .book label{
@@ -102,19 +120,40 @@ p.description{
 	margin: 0;
 }
 
-.middle p span:first-child{
+.middle{
+	width: 300px;
+	padding: 0 20px;
+}
+
+.middle p span:first-child, .right p{
 	font-weight: bold;
 }
 
+.middle p:first-child{
+	margin-bottom: 0;
+}
+
 .middle p{
-	
+	margin: 30px 10px 10px 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .middle span{
-	display: block;
+	height: 25px;
 }
 
-.right, .middle{
+.right{
+	width: 200px;
+	padding-top: 25px;
+}
+
+.right input[type="submit"]{
+	width: 180px;
+	margin: 5px 0;
+}
+
+.right p{
 	
 }
 
@@ -147,3 +186,24 @@ p.description{
 	box-sizing: border-box;
 }
 
+/* ----- About ----- */
+
+.about{
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.about textarea{
+	height: 300px;
+}
+
+.about input{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.about a{
+	margin: 10px 0;
+}

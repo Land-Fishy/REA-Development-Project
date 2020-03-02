@@ -20,17 +20,17 @@ include 'include/bookid.php';
         <h1>Contact</h1>
         <p>Do you have something you want to share with me? A question you want to ask? Did you love my book? Hate it? Don't be shy. I want to hear from you! Use the contact form below to send me a message. I read all messages personally and try to respond to all of them.</p>
         <form method="post">
-          <label>Name:</label>
-          <input type="text" placeholder="Enter Name">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Enter name" required>
 
-          <label>Email:</label>
-          <input type="email" placeholder="Enter Email">
-
-          <label>Comment:</label>
-          <textarea rows="5" placeholder="Enter Comment"></textarea>
-		  <input type="submit" id="submit" name="submit" value="Send">
+          <label for="mail">Email:</label>
+          <input type="email" name="mail" id="mail" placeholder="Enter email" required>
+		  <input type="hidden" name="email" id="email">
+          <label for="message">Comment:</label>
+          <textarea rows="5" placeholder="Enter comment" name="message" id="message"></textarea>
+		  <input type="submit" id="send" name="send" value="Send">
         </form>
-        </div>
+      </div>
     </div>
     </main>
       <?php require_once 'include/footer.php';?>

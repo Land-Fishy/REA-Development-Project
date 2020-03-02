@@ -65,6 +65,7 @@ try{
          width: 200px;
      }
     </style>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>  
   </head>
   <body>
     <?= $success;?>
