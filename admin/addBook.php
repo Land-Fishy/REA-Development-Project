@@ -34,43 +34,37 @@ if(isset($_POST['upload']) && !empty($_FILES['image'])){
   <head>
     <meta charset="UTF-8">
     <title>Edit book</title>
-    <style>
-     form{
-         display: flex;
-         flex-direction: column;
-     }
-     #cover{
-         height: auto;
-         width: 200px;
-     }
-    </style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
   </head>
   <body>
-		<h1>Add a book</h1>
-		<form method="post" enctype="multipart/form-data">
-			<label for="title">Title</label>
-			<input type="text" name="title" id="title">
-			<label for="image">Cover</label>
-			<input type="file" name="image" id="image">
-			<label for="date">Release</label>
-			<input type="date" name="date" id="date">
-			<label for="desc">Description</label>
-			<textarea name="desc" id="desc"></textarea>
-			<label for="asin">ASIN code</label>
-			<input type="text" name="asin" id="asin">
-			<label for="genre">Genre</label>
-			<select name="genre" id="genre">
-				<?php
-				foreach(getGenre($db) as $key=>$value){
-						echo '<option value='.$value['id'].'">'.$value['genre'].'</option>';
-				}
-				?>
-			</select>
-			<input type="submit" name="upload" value="submit" id="upload">
-		</form>
-		<?php
-		echo $error;
-		?>
-		<a href="overview.php">Back to overview</a>
+		<div class="addBook">
+			<h1>Add a book</h1>
+			<form method="post" enctype="multipart/form-data">
+				<label for="title">Title</label>
+				<input type="text" name="title" id="title">
+				<label for="image">Cover</label>
+				<input type="file" name="image" id="image">
+				<label for="date">Release</label>
+				<input type="date" name="date" id="date">
+				<label for="desc">Description</label>
+				<textarea name="desc" id="desc"></textarea>
+				<label for="asin">ASIN code</label>
+				<input type="text" name="asin" id="asin">
+				<label for="genre">Genre</label>
+				<select name="genre" id="genre">
+					<?php
+					foreach(getGenre($db) as $key=>$value){
+							echo '<option value='.$value['id'].'">'.$value['genre'].'</option>';
+					}
+					?>
+				</select>
+				<input type="submit" name="upload" value="submit" id="upload">
+			</form>
+			<?php
+			echo $error;
+			?>
+			<a href="overview.php"><i class="fa fa-arrow-left"></i> Back to overview</a>
+		</div>
 	</body>
 </html>

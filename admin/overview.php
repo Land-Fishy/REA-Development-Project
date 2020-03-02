@@ -60,7 +60,7 @@ if(isset($_POST['submit']) && isset($_POST['confirm'])){
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>      
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
   </head>
   <body>
 	<div class="container">
