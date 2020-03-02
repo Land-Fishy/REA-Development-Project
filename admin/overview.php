@@ -10,9 +10,9 @@ function overviewmaker($data){
     foreach($data as $v){
         $html .= '<section class="book">';
         if(file_exists('../images/books/'.$v['image'])) {
-            $html .= '<img src="'.makeBookImgLink($v['image']).'">';
+            $html .= '<figure><img src="'.makeBookImgLink($v['image']).'"></figure>';
         }
-        $html .= '<div class="middle">';
+        $html .= '<div class="info"><div class="middle">';
         $html .= '<p>'.$v['asin'].'</p>';
         $html .= '<p><span>Release date: </span><span>'.$v['release_date'].'</span></p>';
         $html .= '<p><span>Title: </span><span>'.$v['title'].'</span></p>';
@@ -34,7 +34,7 @@ function overviewmaker($data){
 				<input type="hidden" name="book" value="'.$v['id'].'"'.'>
 				<input type="submit" value="Edit this book">
 				</form>
-			</div>';	
+			</div></div>';	
 		$html .= '</section>';
 		
 		
@@ -60,7 +60,7 @@ if(isset($_POST['submit']) && isset($_POST['confirm'])){
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>      
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
   </head>
   <body>
 	<div class="container">

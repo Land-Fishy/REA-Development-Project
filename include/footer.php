@@ -1,3 +1,4 @@
+	<?php require_once 'notification.php';?>
 	<footer>
 		<div>
 			<p>© Copyright - Lewis Wolfe</p>

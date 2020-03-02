@@ -23,15 +23,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
 		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 		<script>tinymce.init({selector:'textarea'});</script>
 	</head>
 	<body>
-		<h1>Edit About me text</h1>
-		<form method="post">
-			<textarea name="text" id="text"><?= $about['text'];?></textarea>
-			<input type="submit" name="submit" id="submit" value="submit">
-		</form>
-		<a href="overview.php">Back to overview</a>
+		<div class="about">
+			<h1>Edit About me text</h1>
+			<form method="post">
+				<textarea name="text" id="text"><?= $about['text'];?></textarea>
+				<input type="submit" name="submit" id="submit" value="submit">
+			</form>
+			<a href="overview.php"><i class="fa fa-arrow-left"></i> Back to overview</a>
+		</div>
 	</body>
 </html>
