@@ -11,3 +11,4 @@
 <meta property="og:type" content="type"/>
 <meta property="og:url" content="url"/>
 <meta property="og:image" content="image"/>
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"9aa14dc4a67399e4bdcf46cc3","lid":"0ed79b29fe","uniqueMethods":true}) })</script>
