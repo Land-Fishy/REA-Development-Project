@@ -24,7 +24,7 @@ include 'include/bookid.php';
 
           <p>Consider following Lewis Wolfe on his journey as a storyteller. He would be honored.</p>
          </div>
-         <img src="images/sexy.jpg">
+         <img src="images/sexy.jpg" alt="Lewis Wolfe">
        </div>
     </div>
     </main>
