@@ -25,7 +25,7 @@ include 'include/bookid.php';
 
           <label for="mail">Email:</label>
           <input type="email" name="mail" id="mail" placeholder="Enter email" required>
-		  <input type="hidden" name="subject" id="subject">
+		  <input type="hidden" name="email" id="email">
           <label for="message">Comment:</label>
           <textarea rows="5" placeholder="Enter comment" name="message" id="message"></textarea>
 		  <input type="submit" id="send" name="send" value="Send">
