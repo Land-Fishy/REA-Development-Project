@@ -108,3 +108,33 @@ p.description{
 	width: 200px;
 	margin: 0;
 }
+
+/* ----- Login ----- */
+
+.login{
+	width: 300px;
+	color: rgb(10,9,13);
+	margin: 10vw auto;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+
+.login label{
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+
+.login #username, .login #password{
+	padding: 10px;
+	margin-top: 5px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.login input{
+	width: 300px;
+	margin: 15px 0;
+	box-sizing: border-box;
+}
+
