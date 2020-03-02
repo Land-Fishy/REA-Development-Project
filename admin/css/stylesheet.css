@@ -11,6 +11,10 @@ body{
 	box-sizing: border-box;
 }
 
+.fa::before, .fa-arrow-left::before{
+	display: inline;
+}
+
 .buttons{
 	display: flex;
 	flex-direction: row;
@@ -189,7 +193,7 @@ p.description{
 /* ----- About ----- */
 
 .about{
-	width: 800px;
+	width: 650px;
 	height: 500px;
 	margin: 0 auto;
 	position: relative;
@@ -206,4 +210,83 @@ p.description{
 
 .about a{
 	margin: 10px 0;
+}
+
+/* ----- Add/Edit Book ----- */
+
+.editBook, .addBook{
+	width: 540px;
+	margin: 0 auto;
+}
+
+.editBook form, .addBook form{
+	display: flex;
+}
+
+.addBook a, .editBook a{
+	margin-left: 0;
+}
+
+.addBook label, .editBook label{
+	font-weight: bold;
+	margin: 10px 0 5px;
+}
+
+.addBook form input, .addBook textarea, .addBook select, .editBook form div input, .editBook textarea, .editBook select{
+	width: 250px;
+	height: 25px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.addBook textarea, .editBook textarea{
+	height: 153px;
+}
+
+.addBook input[type="submit"], .editBook input[type="submit"]{
+	width: 100%;
+	height: 50px;
+	margin: 10px 0;
+}
+
+/* ----- Add Book ----- */
+
+.addBook{
+	width: 250px;
+}
+
+.addBook form{
+	flex-direction: column;
+}
+
+/* ----- Edit Book ----- */
+
+.editBook form{
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.editBook form .editDiv{
+	background-color: rgb(170,170,185);
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+}
+
+.editBook form .editDiv div{
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+.editBook form .editDiv div:last-child{
+	width: 500px;
+	padding-left: 20px;
+}
+
+.editBook img{
+	width: 250px;
+	height: 400px;
+	margin-bottom: 10px;
 }
