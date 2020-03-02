@@ -253,7 +253,7 @@ nav ul li a.active{
 	margin: 20px;
 }
 .content table{
-	max-width: 500px;
+	max-width: 700px;
 }
 .content .right{
 	text-align: right;
@@ -269,6 +269,15 @@ nav ul li a.active{
 }
 .content td{
 	font-size: 16px;
+}
+.first{
+	font-weight: bold;
+	vertical-align: top;
+}
+iframe{
+	width: 302.4px;
+	height: 495px;
+
 }
 /* ----- Main ----- Jer Main */
 
@@ -442,6 +451,15 @@ footer a:hover, footer a:active{
 		flex-direction: column;
 		justify-content: center;
 		margin: 0 auto;
+	}
+	iframe{
+		margin: 0 auto;
+	}
+	table{
+		width: 336px;
+	}
+	td{
+		display: block;;
 	}
 }
 @media screen and (max-width: 550px){
