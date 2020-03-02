@@ -58,15 +58,12 @@ section.book{
 	box-sizing: border-box;
 }
 
-
-
 .book form div label, .book form div input{
 	width: 50%;
 }
 
 .book div, #remove{
 	width: 250px;
-	padding: 20px;
 	display:flex;
 	flex-direction: column;
 	box-sizing: border-box;
@@ -89,10 +86,6 @@ section.book{
 	right: 100px;
 }
 
-.book p::first-letter, .book label::first-letter, .book legend::first-letter{
-	text-transform: capitalize;
-}
-
 .book p, .book label{
 	height: 30px;
 	line-height: 30px;
@@ -105,6 +98,52 @@ p.description{
 }
 
 .book a, .book input[type="submit"]{
-	width: 200px;
+	width: 150px;
 	margin: 0;
 }
+
+.middle p span:first-child{
+	font-weight: bold;
+}
+
+.middle p{
+	
+}
+
+.middle span{
+	display: block;
+}
+
+.right, .middle{
+	
+}
+
+/* ----- Login ----- */
+
+.login{
+	width: 300px;
+	color: rgb(10,9,13);
+	margin: 10vw auto;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+
+.login label{
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+
+.login #username, .login #password{
+	padding: 10px;
+	margin-top: 5px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.login input{
+	width: 300px;
+	margin: 15px 0;
+	box-sizing: border-box;
+}
+

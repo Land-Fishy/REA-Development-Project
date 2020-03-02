@@ -3,14 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Feb 20, 2020 at 03:45 PM
+-- Generation Time: Mar 02, 2020 at 10:14 AM
 -- Server version: 10.3.22-MariaDB-1:10.3.22+maria~bionic
 -- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+-- SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -48,7 +48,8 @@ CREATE TABLE `books` (
   `genre` int(11) NOT NULL,
   `description` varchar(10000) NOT NULL,
   `asin` varchar(50) NOT NULL,
-  `language` varchar(50) NOT NULL DEFAULT 'English'
+  `language` varchar(50) NOT NULL DEFAULT 'English',
+  `slug` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -72,30 +73,6 @@ CREATE TABLE `characters` (
 CREATE TABLE `genres` (
   `id` int(11) NOT NULL,
   `genre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `menu`
---
-
-CREATE TABLE `menu` (
-  `id` int(11) NOT NULL,
-  `item` varchar(100) NOT NULL,
-  `type` int(11) NOT NULL,
-  `slug` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `menu_type`
---
-
-CREATE TABLE `menu_type` (
-  `id` int(11) NOT NULL,
-  `menu_type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -141,19 +118,6 @@ ALTER TABLE `genres`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `menu`
---
-ALTER TABLE `menu`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `type` (`type`);
-
---
--- Indexes for table `menu_type`
---
-ALTER TABLE `menu_type`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -188,18 +152,6 @@ ALTER TABLE `genres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `menu`
---
-ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `menu_type`
---
-ALTER TABLE `menu_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -220,12 +172,6 @@ ALTER TABLE `books`
 --
 ALTER TABLE `characters`
   ADD CONSTRAINT `parent page content` FOREIGN KEY (`books_id`) REFERENCES `books` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `menu`
---
-ALTER TABLE `menu`
-  ADD CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`type`) REFERENCES `menu_type` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

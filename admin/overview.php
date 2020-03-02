@@ -12,23 +12,31 @@ function overviewmaker($data){
         if(file_exists('../images/books/'.$v['image'])) {
             $html .= '<img src="'.makeBookImgLink($v['image']).'">';
         }
-        $html .= '<div>';
+        $html .= '<div class="middle">';
         $html .= '<p>'.$v['asin'].'</p>';
-        $html .= '<p>release date: '.$v['release_date'].'</p>';
-        $html .= '<p>title: '.$v['title'].'</p>';
-        $html .= '<p class="description">'.$v['description'].'</p>';       
-        $html .= '<form action="editBook.php"><input type="hidden" name="book" value="'.$v['id'].'"'.'><input type="submit" value="Edit this book"></form>';
+        $html .= '<p><span>Release date: </span><span>'.$v['release_date'].'</span></p>';
+        $html .= '<p><span>Title: </span><span>'.$v['title'].'</span></p>';
+        $html .= '<p class="description"><span>Description: </span><span>'.$v['description'].'</span></p>';
         $html .= '</div>';
         $html .= '
-			<form method="post" id="remove">
-			<p>Delete</p>
-			<div>
-				<label for="confirm">Are you sure?</label>
-				<input type="checkbox" name="confirm" id="confirm" required>
-			</div>
-				<input type="hidden" name="bookid" id="bookid" value="'.$v['id'].'">
-				<input type="submit" name="submit" id="submit" value="delete">
-			</form></section>';
+			<div class="right">
+				<form method="post" id="remove">
+				<p>Delete</p>
+				<div>
+					<label for="confirm">Are you sure?</label>
+					<input type="checkbox" name="confirm" id="confirm" required>
+				</div>
+					<input type="hidden" name="bookid" id="bookid" value="'.$v['id'].'">
+					<input type="submit" name="submit" id="submit" value="delete">
+				</form>';
+		$html .= '
+				<form action="editBook.php">
+				<input type="hidden" name="book" value="'.$v['id'].'"'.'>
+				<input type="submit" value="Edit this book">
+				</form>
+			</div>';	
+		$html .= '</section>';
+		
 		
 		
     }
