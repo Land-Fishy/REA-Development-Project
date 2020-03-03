@@ -17,24 +17,9 @@
 		</form>
 		</div>
 	</div>
-
-<!--End mc_embed_signup-->
+	<!--End mc_embed_signup-->
+	
 	<div class="headerBG">
 		<div class="gradient"></div>
-<<<<<<< HEAD
-
-			<svg>
-				<polygon points="0 0, 0 80, 45 80, 50 90, 55 80, 100 80, 100 0, 55 0, 50 10, 45 0"></polygon>
-			</svg>
-
-		<!--<div class="arrow">
-			 <div></div>
-			<svg width="140" height="80">
-			<polygon points="0,0 70,70 140,0 140,80 0,80" style="fill:rgb(238,238,238)" />
-			</svg>
-			<div></div>
-		</div>-->
-=======
->>>>>>> 0612ad96659a9d312d4692f27a13ec200f4653dc
 	</div>
 </header>
