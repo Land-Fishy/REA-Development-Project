@@ -68,6 +68,7 @@ if(isset($_POST['submit']) && isset($_POST['confirm'])){
 			<?php include '../include/logoutForm.php'; ?>
 			<a href="addBook.php">Add a book</a>
 			<a href="editAbout.php">Edit about text</a>
+			<a href="editMeta.php">Edit page meta</a>
 		</div>
 		<h1>All books</h1>
 		<?php echo overviewmaker($books) ?>

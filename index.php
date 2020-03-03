@@ -7,6 +7,7 @@ include 'include/bookid.php';
 <html>
   <head>
 	  <?php require_once 'include/meta.php';?>
+    <?php echo makeJsonld($db, $bookids); ?>
   </head>
   <body>
     <div class="container" id="index">
