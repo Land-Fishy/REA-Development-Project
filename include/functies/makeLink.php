@@ -6,7 +6,8 @@
 function makeLink($linkify){
     if($_SERVER['REMOTE_ADDR'] == 'localhost'){
         return 'http://localhost/'.$linkify;
-    }else{
-        return 'http://rea.porn/'.$linkify;
+    }
+    else{
+        return $linkify;
     }
 }
