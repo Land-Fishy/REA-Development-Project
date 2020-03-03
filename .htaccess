@@ -1,6 +1,10 @@
+ErrorDocument 404 404.php
+
 RewriteEngine On
 
+RewriteRule ^book/?$ sitemap.php [NC,L]
 RewriteRule ^book/(.+)/? book.php?book=$1 [NC,L]
 RewriteRule ^(home)?/?$ index.php [NC,L]
 RewriteRule ^about-me/?$ aboutme.php [NC,L]
 RewriteRule ^contact/?$ contact.php [NC,L]
+
