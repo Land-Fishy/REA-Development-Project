@@ -21,7 +21,7 @@ include 'include/bookid.php';
 			echo $about['text'];
 		 ?>
          </div>
-         <img src="images/sexy.jpg" alt="Lewis Wolfe">
+         <img src="images/lewis-wolfe.jpg" alt="Lewis Wolfe">
        </div>
     </div>
     </main>
