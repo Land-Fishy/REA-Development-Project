@@ -61,7 +61,7 @@ try{
   <body>
 		<div class="editBook">
 			<?= $success;?>
-			<h1>Edit a book</h1>
+			<h1></h1>
 			<form method="post" enctype="multipart/form-data">
 				<div class="editDiv">
 					<div>
