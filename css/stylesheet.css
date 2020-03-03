@@ -68,7 +68,7 @@ header h1{
 	width: 100vw;
 	height: 500px;
 	background-image: url(../images/HeaderBG.png);
-	clip-path: polygon(0% 0%, 0% 80%, 45% 80%, 50% 90%, 55% 80%, 100% 80%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
+	clip-path: polygon(0% 0%, 0% 80%, 45% 80%, 50% 95%, 55% 80%, 100% 80%, 100% 0%, 55% 0%, 50% 15%, 45% 0%);
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -86,20 +86,28 @@ header h1{
 	left: 0;
 }
 
-.arrow{
-	width: 100vw;
-	display: flex;
-	flex-direction: row;
-	z-index: 2;
-	position: absolute;
-	bottom: 0
+svg{
+	
 }
 
-.arrow div{
-	flex: 1;
-	height: 80px;
-	background-color: rgb(238,238,238);
+polygon{
+	fill: rgba(250,100,100,0.5);
 }
+
+/* .arrow{ */
+	/* width: 100vw; */
+	/* display: flex; */
+	/* flex-direction: row; */
+	/* z-index: 2; */
+	/* position: absolute; */
+	/* bottom: 0 */
+/* } */
+
+/* .arrow div{ */
+	/* flex: 1; */
+	/* height: 80px; */
+	/* background-color: rgb(238,238,238); */
+/* } */
 
 /* ----- Nav ----- */
 
@@ -546,6 +554,10 @@ footer a:hover, footer a:active{
 	
 	figure{
 		width: 400px;
+	}
+	
+	.headerBG{
+		clip-path: polygon(0% 0%, 0% 80%, 45% 80%, 50% 0%, 55% 80%, 100% 0%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
 	}
 }
 
