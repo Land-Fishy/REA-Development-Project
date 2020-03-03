@@ -3,8 +3,6 @@ include 'include/db.php';
 include 'include/functies/functies.php';
 include 'include/bookid.php';
 
-print_r($_GET);
-
 if($_GET['book'] ?? false){
     $stmt = $db->prepare('SELECT b.id, b.author, b.image, b.title, b.release_date, g.genre, b.description, b.asin, b.language FROM books b JOIN genres g on b.genre = g.id WHERE b.slug = :slug');
     $stmt->bindParam(':slug',$_GET['book']);
