@@ -1,5 +1,5 @@
 <?php
 
 function makeBookImgLink($img){
-        return 'http://lewiswolfe/new/images/books/'.$img;
+    return 'http://lewiswolfe.com/new/images/books/'.$img;
 }
