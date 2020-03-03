@@ -2,6 +2,6 @@
 	<footer>
 		<div>
 			<p>© Copyright - Lewis Wolfe</p>
-			<a href="REA-Development-Project/sitemap.php">Site map</a>
+			<a href="sitemap">Site map</a>
 		</div>
 	</footer>

@@ -233,6 +233,31 @@ nav ul li a.active{
 .contact textarea{
 	padding-top: 10px;
 }
+.contact input[type="submit"]{
+	width: 250px;
+	height: 50px;
+	color: rgb(238,238,238);
+	background-color: rgb(10,9,13);
+	font-family: candara, sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 50px;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: block;
+	border: none;
+	border-radius: 2px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.contact input[type="submit"]:hover{
+	color:rgb(10,9,13);
+	background-color: rgb(236,236,236);
+}
 /* ----- About me / Books ----- */
 .content{
 	width: 1200px;
