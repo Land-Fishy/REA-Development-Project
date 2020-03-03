@@ -1,16 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql
--- Generation Time: Mar 02, 2020 at 10:14 AM
--- Server version: 10.3.22-MariaDB-1:10.3.22+maria~bionic
--- PHP Version: 7.4.1
+-- Host: 127.0.0.1
+-- Gegenereerd op: 03 mrt 2020 om 15:07
+-- Serverversie: 10.4.8-MariaDB
+-- PHP-versie: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
--- SET time_zone = "+00:00";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -25,7 +25,7 @@ START TRANSACTION;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `about`
+-- Tabelstructuur voor tabel `about`
 --
 
 CREATE TABLE `about` (
@@ -33,10 +33,17 @@ CREATE TABLE `about` (
   `text` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `about`
+--
+
+INSERT INTO `about` (`id`, `text`) VALUES
+(1, '<p>test nog meer tekst</p>');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Tabelstructuur voor tabel `books`
 --
 
 CREATE TABLE `books` (
@@ -49,13 +56,13 @@ CREATE TABLE `books` (
   `description` varchar(10000) NOT NULL,
   `asin` varchar(50) NOT NULL,
   `language` varchar(50) NOT NULL DEFAULT 'English',
-  `slug` varchar(1000) NOT NULL
+  `slug` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `characters`
+-- Tabelstructuur voor tabel `characters`
 --
 
 CREATE TABLE `characters` (
@@ -67,7 +74,7 @@ CREATE TABLE `characters` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `genres`
+-- Tabelstructuur voor tabel `genres`
 --
 
 CREATE TABLE `genres` (
@@ -78,103 +85,112 @@ CREATE TABLE `genres` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Tabelstructuur voor tabel `meta`
+--
+
+CREATE TABLE `meta` (
+  `id` int(11) NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `description` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `meta`
+--
+
+INSERT INTO `meta` (`id`, `name`, `description`) VALUES
+(1, 'Home', 'doei home hallo'),
+(2, 'About me', 'dit niet is about me '),
+(3, 'Contact', 'Dit is contact');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(123) NOT NULL,
-  `password` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Gegevens worden geëxporteerd voor tabel `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'LewisWolfe', '$2a$07$55SyUgmIGsEovoidt2Z9xeQ1QixEgrjYnc70V3zV4kXFpD8vd9Vme');
+
+--
+-- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexes for table `about`
+-- Indexen voor tabel `about`
 --
 ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `books`
+-- Indexen voor tabel `books`
 --
 ALTER TABLE `books`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `genre link` (`genre`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `characters`
---
-ALTER TABLE `characters`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `parent page content` (`books_id`);
-
---
--- Indexes for table `genres`
+-- Indexen voor tabel `genres`
 --
 ALTER TABLE `genres`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indexen voor tabel `meta`
+--
+ALTER TABLE `meta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT for table `about`
+-- AUTO_INCREMENT voor een tabel `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `books`
+-- AUTO_INCREMENT voor een tabel `books`
 --
 ALTER TABLE `books`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `characters`
---
-ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `genres`
+-- AUTO_INCREMENT voor een tabel `genres`
 --
 ALTER TABLE `genres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT voor een tabel `meta`
+--
+ALTER TABLE `meta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `books`
---
-ALTER TABLE `books`
-  ADD CONSTRAINT `genre link` FOREIGN KEY (`genre`) REFERENCES `genres` (`id`);
-
---
--- Constraints for table `characters`
---
-ALTER TABLE `characters`
-  ADD CONSTRAINT `parent page content` FOREIGN KEY (`books_id`) REFERENCES `books` (`id`) ON DELETE CASCADE;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
