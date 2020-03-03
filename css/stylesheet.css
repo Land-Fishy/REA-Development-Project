@@ -78,18 +78,11 @@ header h1{
 	left: 0;
 }
 
-svg{
-	
-}
-
-polygon{
-	fill: rgba(250,100,100,0.5);
-}
-
 /* ----- News Letter CSS ----- */
 
 #mc_embed_signup{
-	
+	position: absolute;
+	top: 250px;
 }
 
 #mc_embed_signup, #mc_embed_signup label, #mc_embed_signup input.email, #mc_embed_signup .button{
@@ -111,6 +104,7 @@ polygon{
 
 #mc_embed_signup input.email, #mc_embed_signup .button{
 	border-radius: 2px !important;
+	margin: 5px !important;
 }
 
 #mc_embed_signup .button{
@@ -617,12 +611,9 @@ footer a:hover, footer a:active{
 		margin: 0 auto;
 	}
 	
-	#mc_embed_signup input.email{
-		width: 300px !important;
-	}
-	
-	#mc_embed_signup .button{
-		width: 150px !important;
+	#mc_embed_signup label, #mc_embed_signup input.email, #mc_embed_signup .button{
+		width: 70vw !important;
+		margin: 5px auto !important;
 	}
 }
 
@@ -674,11 +665,5 @@ footer a:hover, footer a:active{
 	
 	figure{
 		width: 280px;
-	}
-}
-
-@media screen and (max-width: 350px){
-	#mc_embed_signup input.email{
-		padding: 0;
 	}
 }
