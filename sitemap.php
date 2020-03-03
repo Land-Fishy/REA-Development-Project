@@ -2,6 +2,10 @@
 include 'include/db.php';
 include 'include/functies/functies.php';
 include 'include/bookid.php';
+
+print_r($ids);
+
+
 ?>
 <!doctype html>
 <html>
@@ -17,7 +21,11 @@ include 'include/bookid.php';
           <li>
             <a href="books">books</a>
             <ul>
-              <li><a href="book/">placeholder book</a></li>
+              <?php
+              foreach($ids as $v){
+                  echo '<li><a href="book/'.$v['slug'].'">'.$v['title'].'</a></li>';
+              }
+              ?>
             </ul>
           </li>
           <li><a href="about-me">about me</a></li>
