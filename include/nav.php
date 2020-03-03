@@ -1,7 +1,7 @@
 <nav>
     <i class="fas fa-bars"></i>
   <ul>
-    <li><a href="home">home</a></li>
+    <li><a href="">home</a></li>
     <li><a>books</a>
       <?php 
       echo '<ul class="dropdown">';
