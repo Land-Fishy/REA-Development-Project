@@ -21,6 +21,7 @@
 <!--End mc_embed_signup-->
 	<div class="headerBG">
 		<div class="gradient"></div>
+<<<<<<< HEAD
 
 			<svg>
 				<polygon points="0 0, 0 80, 45 80, 50 90, 55 80, 100 80, 100 0, 55 0, 50 10, 45 0"></polygon>
@@ -33,5 +34,7 @@
 			</svg>
 			<div></div>
 		</div>-->
+=======
+>>>>>>> 0612ad96659a9d312d4692f27a13ec200f4653dc
 	</div>
 </header>
