@@ -36,7 +36,6 @@ function makeJsonld($db, $books){
         $data['@context'] = 'https://schema.org/';
         $data['@type'] = 'book';
         $data['author'] = ['@type' => 'person', 'name' => $data['author']];
-        $data['genre'] = ['jan', 'kaas'];
         
         $json .= json_encode($data).PHP_EOL;
         
