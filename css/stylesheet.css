@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* CSS Variable */
 
 :root {
@@ -20,8 +22,13 @@ body{
 	width: 100vw;
 	min-height: 100vh;
 	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 /* ----- Header ----- */
@@ -29,10 +36,19 @@ body{
 header{
 	width: 100vw;
 	background: var(--dark-color);
+	background: -webkit-gradient(linear, left top, left bottom, from(var(--dark-color)), color-stop(50%, rgba(10,9,13,1)), color-stop(50%, rgba(220,220,220,0)), to(rgba(220,220,220,0)));
+	background: -o-linear-gradient(var(--dark-color) 0%, rgba(10,9,13,1) 50%, rgba(220,220,220,0) 50%, rgba(220,220,220,0) 100%);
 	background: linear-gradient(var(--dark-color) 0%, rgba(10,9,13,1) 50%, rgba(220,220,220,0) 50%, rgba(220,220,220,0) 100%);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 	position: relative;
 }
 header a{
@@ -63,7 +79,8 @@ header h1{
 	width: 100vw;
 	height: 500px;
 	background-image: url(../images/HeaderBG.png);
-	clip-path: polygon(0% 0%, 0% 85%, 45% 85%, 50% 95%, 55% 85%, 100% 85%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
+	-webkit-clip-path: polygon(0% 0%, 0% 85%, 45% 85%, 50% 95%, 55% 85%, 100% 85%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
+	        clip-path: polygon(0% 0%, 0% 85%, 45% 85%, 50% 95%, 55% 85%, 100% 85%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -74,6 +91,8 @@ header h1{
 	width: 100vw;
 	height: 100%;
 	background: var(--dark-color);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(10,9,13,1)), color-stop(57%, rgba(10,9,13,1)), color-stop(88%, rgba(10,9,13,0.55)), to(rgba(10,9,13,0.2)));
+	background: -o-linear-gradient(left, rgba(10,9,13,1) 0%, rgba(10,9,13,1) 57%, rgba(10,9,13,0.55) 88%, rgba(10,9,13,0.2) 100%);
 	background: linear-gradient(90deg, rgba(10,9,13,1) 0%, rgba(10,9,13,1) 57%, rgba(10,9,13,0.55) 88%, rgba(10,9,13,0.2) 100%);
 	opacity: 0.87;
 	position: absolute;
@@ -85,7 +104,7 @@ header h1{
 
 #mc_embed_signup{
 	position: absolute;
-	top: 195px;
+	top: 240px;
 }
 
 #mc_embed_signup, #mc_embed_signup label, #mc_embed_signup input.email, #mc_embed_signup .button{
@@ -122,8 +141,13 @@ nav{
 	height: 60px;
 	width: 100vw;
 	background-color: var(--dark-color);
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 20;
@@ -134,9 +158,16 @@ nav ul{
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 nav li{
@@ -146,8 +177,13 @@ nav li{
 
 nav ul li{
 	font-size: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	line-height: 60px;
 }
 
@@ -161,7 +197,8 @@ nav ul li a{
 	text-transform: uppercase;
 	text-decoration: none;
 	display: block;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	cursor: pointer;
 }
 
@@ -174,7 +211,9 @@ nav ul li a:hover{
 .dropdown{
 	display: none;
 	z-index: 10;
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
 .dropdown li a{
@@ -197,9 +236,16 @@ nav ul li a.active{
 /* ----- Contact ----- */
 .contact{
 	width: 600px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 
 }
 .contact p{
@@ -215,8 +261,13 @@ nav ul li a.active{
 	text-align: center;
 }
 .contact form{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .contact label{
 	margin-top: 20px;
@@ -227,7 +278,8 @@ nav ul li a.active{
 	background-color: var(--input-background);
 	border-radius: 5px;
 	font-size: 15px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 0 10px;
 }
 .contact input[type="text"], input[type="email"]{
@@ -254,7 +306,8 @@ nav ul li a.active{
 	display: block;
 	border: none;
 	border-radius: 2px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	cursor: pointer;
 }
 
@@ -265,9 +318,15 @@ nav ul li a.active{
 /* ----- About me / Books ----- */
 .content{
 	width: 1200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .content h1{
 	font: var(--font-light);
@@ -285,9 +344,16 @@ nav ul li a.active{
 	margin-top: 0px;
 }
 .row{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin: 0 auto;
 }
 .about-me{
@@ -355,28 +421,49 @@ main{
 	background-color: rgb(238,238,238);
 	padding: 20px;
 	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	box-sizing: border-box;
-	justify-content: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 figure{
 	width: 30%;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	height: auto;
 	margin: 25px 0;
 	padding: 20px;
-	justify-content: center;
-	box-sizing: border-box;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 figure a{
 	text-decoration: none;
+	display: block;
 }
 figure:hover{
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 	z-index: 1;
 }
@@ -390,9 +477,16 @@ figcaption{
 	width: 100%;
 	font-size: 30px;
 	color: var(--light-color);
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	text-align: center;
 	text-transform: uppercase;
 	background-color: var(--dark-color);
@@ -453,7 +547,8 @@ footer a:hover, footer a:active{
 	padding: 10px;
 	bottom: 0;
 	position: fixed;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	z-index: 5;
 }	
 
@@ -496,7 +591,8 @@ footer a:hover, footer a:active{
 	}
 	
 	.headerBG{
-		clip-path: polygon(0% 0%, 0% 85%, 43% 85%, 50% 95%, 57% 85%, 100% 85%, 100% 0%, 57% 0%, 50% 10%, 43% 0%);
+		-webkit-clip-path: polygon(0% 0%, 0% 85%, 43% 85%, 50% 95%, 57% 85%, 100% 85%, 100% 0%, 57% 0%, 50% 10%, 43% 0%);
+		        clip-path: polygon(0% 0%, 0% 85%, 43% 85%, 50% 95%, 57% 85%, 100% 85%, 100% 0%, 57% 0%, 50% 10%, 43% 0%);
 	}
 }
 
@@ -510,9 +606,16 @@ footer a:hover, footer a:active{
 		width: 400px;
 	}
 	.row{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: row;
-		justify-content: unset;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: unset;
+		    -ms-flex-pack: unset;
+		        justify-content: unset;
 	}
 }
 
@@ -526,15 +629,23 @@ footer a:hover, footer a:active{
 @media screen and (max-width: 920px){
 	.content{
 		width: 100vw;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.about-me{
 		width: 500px;
 		height: auto;
 		padding: 10px;
-		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
 	}
 	.content img{
 		width: 100%;
@@ -542,9 +653,16 @@ footer a:hover, footer a:active{
 		padding: 0;
 	}
 	.row{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		margin: 0 auto;
 	}
 	iframe{
@@ -560,7 +678,10 @@ footer a:hover, footer a:active{
 
 @media screen and (max-width: 850px){
 	#index main{
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	
 	figure{
@@ -568,7 +689,8 @@ footer a:hover, footer a:active{
 	}
 	
 	.headerBG{
-		clip-path: polygon(0% 0%, 0% 85%, 40% 85%, 50% 95%, 60% 85%, 100% 85%, 100% 0%, 60% 0%, 50% 10%, 40% 0%);
+		-webkit-clip-path: polygon(0% 0%, 0% 85%, 40% 85%, 50% 95%, 60% 85%, 100% 85%, 100% 0%, 60% 0%, 50% 10%, 40% 0%);
+		        clip-path: polygon(0% 0%, 0% 85%, 40% 85%, 50% 95%, 60% 85%, 100% 85%, 100% 0%, 60% 0%, 50% 10%, 40% 0%);
 	}
 	
 	.contact{
@@ -581,6 +703,8 @@ footer a:hover, footer a:active{
 @media screen and (max-width: 768px){	
 	header h1{
 		font-size: 50px;
+		-webkit-transition: font-size 2s;
+		-o-transition: font-size 2s;
 		transition: font-size 2s;
 	}
 	
@@ -592,8 +716,13 @@ footer a:hover, footer a:active{
 		width: 100%;
 		visibility: hidden;
 		opacity: 0;
-		flex-direction: column;
-		justify-content: flex-start;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		margin: 0 auto;
 		position: absolute;
 	}
@@ -617,6 +746,8 @@ footer a:hover, footer a:active{
 	nav:hover>ul{
 		visibility: visible;
 		opacity: 1;
+		-webkit-transition: opacity 0.5s;
+		-o-transition: opacity 0.5s;
 		transition: opacity 0.5s;
 	}
 	
@@ -625,13 +756,13 @@ footer a:hover, footer a:active{
 	}
 	
 	nav:hover+div {
+		-webkit-transition: margin-top 1s;
+		-o-transition: margin-top 1s;
 		transition: margin-top 1s;
 	}
 	
-	nav>ul>li, nav>ul>li>a, .dropdown{
+nav>ul>li, nav>ul>li>a, .dropdown{
 		display: block;
-		position: relative;
-		top: 30px;
 	}
 	
 	footer div{
@@ -664,13 +795,16 @@ footer a:hover, footer a:active{
 	}
 	
 	.headerBG{
-		clip-path: polygon(0% 0%, 0% 85%, 37% 85%, 50% 95%, 63% 85%, 100% 85%, 100% 0%, 63% 0%, 50% 10%, 37% 0%);
+		-webkit-clip-path: polygon(0% 0%, 0% 85%, 37% 85%, 50% 95%, 63% 85%, 100% 85%, 100% 0%, 63% 0%, 50% 10%, 37% 0%);
+		        clip-path: polygon(0% 0%, 0% 85%, 37% 85%, 50% 95%, 63% 85%, 100% 85%, 100% 0%, 63% 0%, 50% 10%, 37% 0%);
 	}
 }
 
 @media screen and (max-width: 460px){
 	header h1{
 		font-size: 30px;
+		-webkit-transition: font-size 2s;
+		-o-transition: font-size 2s;
 		transition: font-size 2s;
 	}
 	
@@ -685,13 +819,16 @@ footer a:hover, footer a:active{
 	}
 	
 	.headerBG{
-		clip-path: polygon(0% 0%, 0% 85%, 35% 85%, 50% 95%, 65% 85%, 100% 85%, 100% 0%, 65% 0%, 50% 10%, 35% 0%);
+		-webkit-clip-path: polygon(0% 0%, 0% 85%, 35% 85%, 50% 95%, 65% 85%, 100% 85%, 100% 0%, 65% 0%, 50% 10%, 35% 0%);
+		        clip-path: polygon(0% 0%, 0% 85%, 35% 85%, 50% 95%, 65% 85%, 100% 85%, 100% 0%, 65% 0%, 50% 10%, 35% 0%);
 	}
 }
 
 @media screen and (max-width: 360px){
 	header h1{
 		font-size: 30px;
+		-webkit-transition: font-size 2s;
+		-o-transition: font-size 2s;
 		transition: font-size 2s;
 	}
 	
