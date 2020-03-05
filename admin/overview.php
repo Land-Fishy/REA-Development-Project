@@ -69,6 +69,8 @@ if(isset($_POST['submit']) && isset($_POST['confirm'])){
 			<a href="addBook.php">Add a book</a>
 			<a href="editAbout.php">Edit about text</a>
 			<a href="editMeta.php">Edit page meta</a>
+			<a href="addGenre.php">Add genre</a>
+			<a href="editGenre.php">Edit genres</a>
 		</div>
 		<h1>All books</h1>
 		<?php echo overviewmaker($books) ?>
