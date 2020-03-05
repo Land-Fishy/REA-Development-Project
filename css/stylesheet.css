@@ -159,6 +159,7 @@ nav ul li a{
 	text-decoration: none;
 	display: block;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 nav ul li a:hover{
@@ -625,6 +626,8 @@ footer a:hover, footer a:active{
 	
 	nav>ul>li, nav>ul>li>a, .dropdown{
 		display: block;
+		position: relative;
+		top: 30px;
 	}
 	
 	footer div{
