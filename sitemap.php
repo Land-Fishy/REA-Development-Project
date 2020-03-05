@@ -2,10 +2,6 @@
 include 'include/db.php';
 include 'include/functies/functies.php';
 include 'include/bookid.php';
-
-print_r($ids);
-
-
 ?>
 <!doctype html>
 <html>
