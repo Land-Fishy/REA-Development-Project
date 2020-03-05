@@ -151,8 +151,10 @@ try{
         </div>
         <div id="addcharacter" style="display:flex;flex-direction: column">
           <?php
-          foreach($book['character'] as $k => $v){
-              echo '<span><label for="c'.$k.'">character name</label><input type="text" name="echaracter'.$k.'" id="c'.$k.'" value="'.$v.'"> delete > <input name="d'.$k.'" type="checkbox"> </span>';
+          if($book['character'] ?? false){
+              foreach($book['character'] as $k => $v){
+                  echo '<span><label for="c'.$k.'">character name</label><input type="text" name="echaracter'.$k.'" id="c'.$k.'" value="'.$v.'"> delete > <input name="d'.$k.'" type="checkbox"> </span>';
+              }
           }
           ?>
           <button type="button" id="butt">add character</button>
@@ -172,7 +174,7 @@ try{
        span.setAttribute("class", "ch");
        
        let label = document.createElement("label");
-       label.innerHTML = "Character name:";
+       label.innerHTML = "New character name:";
 
        let text = document.createElement("input");
        text.setAttribute("type", "text");
