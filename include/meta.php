@@ -1,3 +1,7 @@
+<?php
+	$test = basename($_SERVER['PHP_SELF']);
+	//echo getMeta($db, [$book['id']]);	
+?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lewis Wolfe</title>

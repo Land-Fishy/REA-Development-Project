@@ -6,7 +6,7 @@ function makeBookFigures($db, $bookids){
     foreach($bookids as $id){
         $book = bookinf($db, $id);
         $html .= '<figure>';
-        $html .= '<a src="book/'.$book['slug'].'"><img src="'.makeBookImgLink($book['image']).'" alt="book cover of '.$book['title'].'">';
+        $html .= '<a href="book/'.$book['slug'].'"><img src="'.makeBookImgLink($book['image']).'" alt="book cover of '.$book['title'].'">';
         $html .= '<figcaption>'.$book['title'].'</figcaption></a>';
         $html .= '</figure>';
     }
