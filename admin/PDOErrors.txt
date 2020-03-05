@@ -16,3 +16,5 @@ SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in you
 SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
 >>>>>>> e5c87e3035bd34ad86e117324a342d460438f0d5
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id' cannot be null
