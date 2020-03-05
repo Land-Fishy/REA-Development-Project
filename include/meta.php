@@ -1,10 +1,24 @@
 <?php
-	$test = basename($_SERVER['PHP_SELF']);
-	//echo getMeta($db, [$book['id']]);	
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		$meta = getMeta($db, 2);
+	}
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lewis Wolfe</title>
+<title>Lewis Wolfe<?php 
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		echo ' - '.$meta['name'];
+	}else{
+		echo ' - '.$book['title'];
+	}?>
+</title>
+<meta name="description" content="<?php 
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		echo $meta['description'];
+	}else{
+		echo $book['description'];
+	}?>">
+<link rel="canonical" href="<?php echo 'http://lewiswolfe.com'.$_SERVER['REQUEST_URI'];?>">
 <link rel="icon" href="images/fav.png" sizes="36x36">
 <base href="http://<?= $_SERVER['HTTP_HOST'].'/REA-Development-Project/';?>" target="_self">
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" important>
@@ -12,10 +26,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="script/botbar.js"></script>
 <meta name="theme-color" content="rgb(10,9,13)">
-<meta property="og:title" content="title">
-<meta property="og:type" content="type">
-<meta property="og:url" content="url">
-<meta property="og:image" content="image">
+<meta property="og:title" content="Lewis Wolfe<?php 
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		echo ' - '.$meta['name'];
+	}else{
+		echo ' - '.$book['title'];
+	}?>">
+<meta property="og:type" content="website">
+<meta property="og:description" content="<?php 
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		echo $meta['description'];
+	}else{
+		echo $book['description'];
+	}?>">
+<meta property="og:url" content="<?php echo 'http://lewiswolfe.com'.$_SERVER['REQUEST_URI'];?>">
+<meta property="og:image" content="<?php 
+	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
+		echo 'images/lewis-wolfe.jpg';
+	}else{
+		echo 'images/books/'.$book['image'];
+	}?>">
 <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"9aa14dc4a67399e4bdcf46cc3","lid":"0ed79b29fe","uniqueMethods":true}) })</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118897202-3"></script>
