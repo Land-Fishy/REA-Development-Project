@@ -37,8 +37,7 @@ function makeJsonld($db, $books){
         $data['@type'] = 'book';
         $author = $data['author'];
         $data['author'] = ['@type' => 'person', 'name' => $author];
-        $data['genre'] = ['jan', 'kaas'];
-        
+       
         $json .= json_encode($data).PHP_EOL;
         
         if(($k + 1) != (count($datas)) and count($datas) > 0){
