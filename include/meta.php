@@ -1,6 +1,12 @@
 <?php
 	if(basename($_SERVER['PHP_SELF']) != 'book.php'){
-		$meta = getMeta($db, 2);
+		if($_SERVER['REQUEST_URI'] == '/REA-Development-Project/about-me'){
+			$meta = getMeta($db, 2);
+		}elseif($_SERVER['REQUEST_URI'] == '/REA-Development-Project/contact'){
+			$meta = getMeta($db, 3);
+		}else{
+			$meta = getMeta($db, 1);
+		}
 	}
 ?>
 <meta charset="UTF-8">
