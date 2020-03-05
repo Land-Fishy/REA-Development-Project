@@ -1,6 +1,6 @@
 <header>
 	<div class="headerTop">
-		<h1>Lewis Wolfe</h1>
+		<a href="" target="_self"><h1>Lewis Wolfe</h1></a>
 		<?php require_once 'include/nav.php';?>
 
 		<!-- Begin Mailchimp Signup Form -->

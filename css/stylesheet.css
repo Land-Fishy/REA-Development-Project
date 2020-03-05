@@ -35,6 +35,9 @@ header{
 	justify-content: flex-start;
 	position: relative;
 }
+header a{
+	text-decoration: none;
+}
 
 .headerTop{
 	height: 190px;
