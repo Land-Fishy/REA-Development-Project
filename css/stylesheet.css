@@ -606,6 +606,7 @@ footer a:hover, footer a:active{
 		font-size: 30px;
 		margin: 15px;
 		position: absolute;
+		right: 0px;
 		display: block;
 		z-index: 1;
 	}
