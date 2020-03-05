@@ -10,7 +10,7 @@
 }
 
 body{
-	font-family: "candara light";
+	font-family: "candara light", sans-serif;
 	background-color: rgb(238, 238, 238);
 	overflow-x: hidden;
 	margin: 0;
@@ -63,7 +63,7 @@ header h1{
 	line-height: 130px;
 	color: rgb(220,220,220);
 	background-color: rgb(10,9,13);
-	font-family: "candara light";
+	font-family: candara, sans-serif;
 	font-size: 70px;
 	font-weight: normal;
 	text-align: center;
@@ -114,7 +114,7 @@ header h1{
 	font-size: 14px;
 	width: 100%;
 	margin-top: 100px;
-	z-index: 1;
+	z-index: 0;
 }
 
 #mc_embed_signup label{
@@ -189,7 +189,7 @@ nav ul li a{
 	width: 100%;
 	color: rgb(220,220,220);
 	background-color: rgb(10,9,13);
-	font: "candara light";
+	font-family: "candara light", sans-serif;
 	font-size: 24px;
 	text-align: center;
 	text-transform: uppercase;
@@ -327,7 +327,7 @@ nav ul li a.active{
 	    flex-wrap: wrap;
 }
 .content h1{
-	font: "candara light";
+	font: "candara light", sans-serif;
 	font-size: 50px;
 	text-align: center;
 	color: rgb(10,9,13);
@@ -364,7 +364,6 @@ nav ul li a.active{
 	padding: 25px;
 }
 .content iframe, table{
-	padding: 20px;
 	margin: 20px;
 }
 .content table{
@@ -396,7 +395,7 @@ iframe{
 }
 /* ----- Sitemap -----*/
 .sitemap a{
-	font-family: candara light;
+	font-family: candara light, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 40px;
