@@ -35,6 +35,9 @@ header{
 	justify-content: flex-start;
 	position: relative;
 }
+header a{
+	text-decoration: none;
+}
 
 .headerTop{
 	height: 190px;
@@ -58,7 +61,7 @@ header h1{
 
 .headerBG{
 	width: 100vw;
-	height: 650px;
+	height: 500px;
 	background-image: url(../images/HeaderBG.png);
 	clip-path: polygon(0% 0%, 0% 85%, 45% 85%, 50% 95%, 55% 85%, 100% 85%, 100% 0%, 55% 0%, 50% 10%, 45% 0%);
 	background-position: center;
@@ -82,7 +85,7 @@ header h1{
 
 #mc_embed_signup{
 	position: absolute;
-	top: 250px;
+	top: 195px;
 }
 
 #mc_embed_signup, #mc_embed_signup label, #mc_embed_signup input.email, #mc_embed_signup .button{
@@ -159,6 +162,7 @@ nav ul li a{
 	text-decoration: none;
 	display: block;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 nav ul li a:hover{
@@ -605,6 +609,7 @@ footer a:hover, footer a:active{
 		font-size: 30px;
 		margin: 15px;
 		position: absolute;
+		right: 0px;
 		display: block;
 		z-index: 1;
 	}
@@ -625,6 +630,8 @@ footer a:hover, footer a:active{
 	
 	nav>ul>li, nav>ul>li>a, .dropdown{
 		display: block;
+		position: relative;
+		top: 30px;
 	}
 	
 	footer div{
