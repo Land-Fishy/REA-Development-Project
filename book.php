@@ -9,10 +9,25 @@ if($_GET['book'] ?? false){
     $stmt->execute();
     $book = $stmt->fetch(PDO::FETCH_ASSOC);
     $json = true;
+
+    $stmt = $db->prepare('SELECT id, name FROM characters WHERE books_id = :id');
+    $stmt->bindParam(':id', $book['id']);
+    $stmt->execute();
+    $chars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if(count($chars) > 0){
+        foreach($chars as $k => $v){
+            $a[] = $v['name'];
+        };
+        $book['character'] = $a;
+    }
+    
 }else{
     $book = false;
     $json = false;
 }
+
+
 ?>
 
 <!doctype html>
@@ -30,16 +45,23 @@ if($_GET['book'] ?? false){
           <div class="row">
             <iframe type="text/html" width="504" height="825" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=<?php echo $book['asin']; ?>&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_-sYtEb2YBFR85&hideShare=true" ></iframe>
             <table>
-	          <?php 
-				 echo '<tr><td class="first">Author:</td><td class="second"> '.$book['author'].'</td></tr>';
-				 echo '<tr><td class="first">Title:</td><td class="second"> '.$book['title'].'</td></tr>';
-				 echo '<tr><td class="first">Release Date:</td><td class="second"> '.$book['release_date'].'</td></tr>';
-				 echo '<tr><td class="first">Genre:</td><td class="second"> '.$book['genre'].'</td></tr>';
-				 echo '<tr><td class="first">Description:</td><td class="second"> '.$book['description'].'</td></tr>';
-				 echo '<tr><td class="first">Asin:</td><td class="second"> '.$book['asin'].'</td></tr>';
-				 echo '<tr><td class="first">Language:</td><td class="second"> '.$book['language'].'</td></tr>';
-				 ?>
-        	</table>
+	            <?php 
+				      echo '<tr><td class="first">Author:</td><td class="second"> '.$book['author'].'</td></tr>';
+				      echo '<tr><td class="first">Title:</td><td class="second"> '.$book['title'].'</td></tr>';
+				      echo '<tr><td class="first">Release Date:</td><td class="second"> '.$book['release_date'].'</td></tr>';
+				      echo '<tr><td class="first">Genre:</td><td class="second"> '.$book['genre'].'</td></tr>';
+				      echo '<tr><td class="first">Description:</td><td class="second"> '.$book['description'].'</td></tr>';
+              if($book['character'] ?? false){
+                  echo '<tr><td class="first">character:</td><td class="second"><ul>';
+                  foreach($book['character'] as $v){
+                      echo '<li>'.$v.'</li>';
+                  }
+                  echo '</ul></td></tr>';
+              }
+				      echo '<tr><td class="first">Asin:</td><td class="second"> '.$book['asin'].'</td></tr>';
+				      echo '<tr><td class="first">Language:</td><td class="second"> '.$book['language'].'</td></tr>';
+				      ?>
+        	  </table>
           </div>
         </div>
       </main>
