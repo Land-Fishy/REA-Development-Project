@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	<url>
+		<loc>http://www.lewiswolfe.com/</loc>
+		<lastmod>2020-03-03T09:37:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://www.lewiswolfe.com/about-me</loc>
+		<lastmod>2020-03-03T09:37:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://www.lewiswolfe.com/contact</loc>
+		<lastmod>2020-03-03T09:37:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://www.lewiswolfe.com/book/?</loc>
+		<lastmod>2020-03-03T09:37:17+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.6</priority>
+		<image:image>
+			<image:loc>?</image:loc>
+			<image:caption>?</image:caption>
+			<image:title>?</image:title>
+		</image:image>
+	</url>
+</urlset>
