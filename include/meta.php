@@ -24,6 +24,7 @@
 	}else{
 		echo $book['description'];
 	}?>">
+<link rel="icon" type="image/png" sizes="32x32" href="images/fav.png">
 <link rel="canonical" href="<?php echo 'http://lewiswolfe.com'.$_SERVER['REQUEST_URI'];?>">
 <link rel="icon" href="images/fav.png" sizes="36x36">
 <base href="http://<?= $_SERVER['HTTP_HOST'].'/REA-Development-Project/';?>" target="_self">
